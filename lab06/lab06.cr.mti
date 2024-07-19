@@ -1,0 +1,63 @@
+/home/sucharitha/Downloads/laptop/lab06/sv/yapp_router.sv {1 {vlog -work work -vopt -sv -stats=none /home/sucharitha/Downloads/laptop/lab06/sv/yapp_router.sv
+QuestaSim-64 vlog 2021.2_1 Compiler 2021.05 May 15 2021
+-- Compiling module host_ctl
+-- Compiling module fifo
+-- Compiling module port_fsm
+-- Compiling module yapp_router
+
+Top level modules:
+	yapp_router
+
+} {} {}} C:/Users/dell/OneDrive/Desktop/Vaaluka_training/uvm_labs/lab06/sv/yapp_router.sv {1 {vlog -work work -vopt -sv -stats=none C:/Users/dell/OneDrive/Desktop/Vaaluka_training/uvm_labs/lab06/sv/yapp_router.sv
+QuestaSim-64 vlog 10.6c Compiler 2017.07 Jul 26 2017
+-- Compiling module host_ctl
+-- Compiling module fifo
+-- Compiling module port_fsm
+-- Compiling module yapp_router
+
+Top level modules:
+	yapp_router
+
+} {} {}} /home/sucharitha/Downloads/laptop/lab06/tb/top.sv {2 {vlog -work work -vopt -sv -stats=none /home/sucharitha/Downloads/laptop/lab06/tb/top.sv
+QuestaSim-64 vlog 2021.2_1 Compiler 2021.05 May 15 2021
+** Note: (vlog-2286) /home/sucharitha/Downloads/laptop/lab06/tb/top.sv(3): Using implicit +incdir+/usr/local/questasim/uvm-1.1d/../verilog_src/uvm-1.1d/src from import uvm_pkg
+-- Compiling package top_sv_unit
+-- Importing package mtiUvm.uvm_pkg (uvm-1.1d Built-in)
+** Warning: /home/sucharitha/Downloads/laptop/lab06/tb/../sv/yapp_tx_seqs.sv(170): (vlog-2240) Treating stand-alone use of function 'randomize' as an implicit VOID cast.
+-- Compiling module host_ctl
+-- Compiling module fifo
+-- Compiling module port_fsm
+-- Compiling module yapp_router
+-- Compiling interface yapp_if
+-- Compiling module top
+
+Top level modules:
+	top
+
+} {} {}} /home/sucharitha/Downloads/laptop/lab06/sv/yapp_if.sv {1 {vlog -work work -vopt -sv -stats=none /home/sucharitha/Downloads/laptop/lab06/sv/yapp_if.sv
+QuestaSim-64 vlog 2021.2_1 Compiler 2021.05 May 15 2021
+-- Compiling interface yapp_if
+
+Top level modules:
+	--none--
+
+} {} {}} C:/Users/dell/OneDrive/Desktop/Vaaluka_training/uvm_labs/lab06/sv/yapp_if.sv {1 {vlog -work work -vopt -sv -stats=none C:/Users/dell/OneDrive/Desktop/Vaaluka_training/uvm_labs/lab06/sv/yapp_if.sv
+QuestaSim-64 vlog 10.6c Compiler 2017.07 Jul 26 2017
+-- Compiling interface yapp_if
+
+Top level modules:
+	--none--
+
+} {} {}} C:/Users/dell/OneDrive/Desktop/Vaaluka_training/uvm_labs/lab06/tb/top.sv {2 {vlog -work work -vopt -sv -stats=none C:/Users/dell/OneDrive/Desktop/Vaaluka_training/uvm_labs/lab06/tb/top.sv
+QuestaSim-64 vlog 10.6c Compiler 2017.07 Jul 26 2017
+** Note: (vlog-2286) C:/Users/dell/OneDrive/Desktop/Vaaluka_training/uvm_labs/lab06/tb/top.sv(2): Using implicit +incdir+C:/questasim64_10.6c/uvm-1.1d/../verilog_src/uvm-1.1d/src from import uvm_pkg
+-- Compiling package top_sv_unit
+-- Importing package mtiUvm.uvm_pkg (uvm-1.1d Built-in)
+** Warning: C:\Users\dell\OneDrive\Desktop\Vaaluka_training\uvm_labs\lab06\tb\..\sv\yapp_tx_seqs.sv(170): (vlog-2240) Treating stand-alone use of function 'randomize' as an implicit VOID cast.
+-- Compiling interface yapp_if
+-- Compiling module top
+
+Top level modules:
+	top
+
+} {} {}}

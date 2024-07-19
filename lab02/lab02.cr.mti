@@ -1,0 +1,11 @@
+C:/Users/dell/OneDrive/Desktop/Vaaluka_training/lab02/tb/top.sv {1 {vlog -work work -vopt -sv -stats=none C:/Users/dell/OneDrive/Desktop/Vaaluka_training/lab02/tb/top.sv
+QuestaSim-64 vlog 10.6c Compiler 2017.07 Jul 26 2017
+** Note: (vlog-2286) C:/Users/dell/OneDrive/Desktop/Vaaluka_training/lab02/tb/top.sv(3): Using implicit +incdir+C:/questasim64_10.6c/uvm-1.1d/../verilog_src/uvm-1.1d/src from import uvm_pkg
+-- Compiling package top_sv_unit
+-- Importing package mtiUvm.uvm_pkg (uvm-1.1d Built-in)
+-- Compiling module top
+
+Top level modules:
+	top
+
+} {} {}}

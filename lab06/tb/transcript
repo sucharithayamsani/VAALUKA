@@ -1,0 +1,1814 @@
+# //  Questa Sim-64
+# //  Version 2021.2_1 linux_x86_64 May 15 2021
+# //
+# //  Copyright 1991-2021 Mentor Graphics Corporation
+# //  All Rights Reserved.
+# //
+# //  QuestaSim and its associated documentation contain trade
+# //  secrets and commercial or financial information that are the property of
+# //  Mentor Graphics Corporation and are privileged, confidential,
+# //  and exempt from disclosure under the Freedom of Information Act,
+# //  5 U.S.C. Section 552. Furthermore, this information
+# //  is prohibited from disclosure under the Trade Secrets Act,
+# //  18 U.S.C. Section 1905.
+# //
+# Loading project lab06
+# Compile of top.sv was successful with warnings.
+# Compile of yapp_router.sv was successful.
+# Compile of yapp_if.sv was successful.
+# 3 compiles, 0 failed with no errors.
+# Compile of top.sv was successful with warnings.
+# Compile of yapp_router.sv was successful.
+# Compile of yapp_if.sv was successful.
+# 3 compiles, 0 failed with no errors.
+# Optimization canceled
+vsim work.top -voptargs=+acc
+# vsim work.top -voptargs="+acc" 
+# Start time: 18:51:23 on Jul 15,2024
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# ** Warning: /home/sucharitha/Downloads/laptop/lab06/tb/top.sv(13): (vopt-2685) [TFMPC] - Too few port connections for 'dut'.  Expected 19, found 8.
+# ** Warning: /home/sucharitha/Downloads/laptop/lab06/tb/top.sv(13): (vopt-2718) [TFMPC] - Missing connection for port 'hwr_rd'.
+# ** Warning: /home/sucharitha/Downloads/laptop/lab06/tb/top.sv(13): (vopt-2718) [TFMPC] - Missing connection for port 'hen'.
+# ** Warning: /home/sucharitha/Downloads/laptop/lab06/tb/top.sv(13): (vopt-2718) [TFMPC] - Missing connection for port 'hdata'.
+# ** Warning: /home/sucharitha/Downloads/laptop/lab06/tb/top.sv(13): (vopt-2718) [TFMPC] - Missing connection for port 'haddr'.
+# ** Warning: /home/sucharitha/Downloads/laptop/lab06/tb/top.sv(13): (vopt-2718) [TFMPC] - Missing connection for port 'data_vld_2'.
+# ** Warning: /home/sucharitha/Downloads/laptop/lab06/tb/top.sv(13): (vopt-2718) [TFMPC] - Missing connection for port 'data_2'.
+# ** Warning: /home/sucharitha/Downloads/laptop/lab06/tb/top.sv(13): (vopt-2718) [TFMPC] - Missing connection for port 'data_vld_1'.
+# ** Warning: /home/sucharitha/Downloads/laptop/lab06/tb/top.sv(13): (vopt-2718) [TFMPC] - Missing connection for port 'data_1'.
+# ** Warning: /home/sucharitha/Downloads/laptop/lab06/tb/top.sv(13): (vopt-2718) [TFMPC] - Missing connection for port 'data_vld_0'.
+# ** Warning: /home/sucharitha/Downloads/laptop/lab06/tb/top.sv(13): (vopt-2718) [TFMPC] - Missing connection for port 'data_0'.
+# ** Warning: /home/sucharitha/Downloads/laptop/lab06/tb/top.sv(13): (vopt-2718) [TFMPC] - Missing connection for port 'error'.
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=12.
+# Loading sv_std.std
+# Loading mtiUvm.uvm_pkg(fast)
+# Loading work.top_sv_unit(fast)
+# Loading mtiUvm.questa_uvm_pkg(fast)
+# Loading work.top(fast)
+# Loading work.yapp_if(fast__2)
+# Loading work.yapp_router(fast)
+# Loading work.host_ctl(fast)
+# Loading work.port_fsm(fast)
+# Loading work.fifo(fast)
+# Loading work.yapp_if(fast)
+# ** Warning: (vsim-3015) [PCDPC] - Port size (1) does not match connection size (32) for port 'suspend_0'. The port definition is at: /home/sucharitha/Downloads/laptop/lab06/sv/yapp_router.sv(315).
+#    Time: 0 ns  Iteration: 0  Instance: /top/dut File: /home/sucharitha/Downloads/laptop/lab06/tb/top.sv Line: 13
+# ** Warning: (vsim-3015) [PCDPC] - Port size (1) does not match connection size (32) for port 'suspend_1'. The port definition is at: /home/sucharitha/Downloads/laptop/lab06/sv/yapp_router.sv(318).
+#    Time: 0 ns  Iteration: 0  Instance: /top/dut File: /home/sucharitha/Downloads/laptop/lab06/tb/top.sv Line: 13
+# ** Warning: (vsim-3015) [PCDPC] - Port size (1) does not match connection size (32) for port 'suspend_2'. The port definition is at: /home/sucharitha/Downloads/laptop/lab06/sv/yapp_router.sv(321).
+#    Time: 0 ns  Iteration: 0  Instance: /top/dut File: /home/sucharitha/Downloads/laptop/lab06/tb/top.sv Line: 13
+# Loading /usr/local/questasim/uvm-1.1d/linux_x86_64/uvm_dpi.so
+add wave -position insertpoint sim:/top/dut/*
+run -all
+# ----------------------------------------------------------------
+# UVM-1.1d
+# (C) 2007-2013 Mentor Graphics Corporation
+# (C) 2007-2013 Cadence Design Systems, Inc.
+# (C) 2006-2013 Synopsys, Inc.
+# (C) 2011-2013 Cypress Semiconductor Corp.
+# ----------------------------------------------------------------
+# 
+#   ***********       IMPORTANT RELEASE NOTES         ************
+# 
+#   You are using a version of the UVM library that has been compiled
+#   with `UVM_NO_DEPRECATED undefined.
+#   See http://www.eda.org/svdb/view.php?id=3313 for more details.
+# 
+#   You are using a version of the UVM library that has been compiled
+#   with `UVM_OBJECT_MUST_HAVE_CONSTRUCTOR undefined.
+#   See http://www.eda.org/svdb/view.php?id=3770 for more details.
+# 
+#       (Specify +UVM_NO_RELNOTES to turn off this notice)
+# 
+# UVM_INFO verilog_src/questa_uvm_pkg-1.2/src/questa_uvm_pkg.sv(277) @ 0: reporter [Questa UVM] QUESTA_UVM-1.2.3
+# UVM_INFO verilog_src/questa_uvm_pkg-1.2/src/questa_uvm_pkg.sv(278) @ 0: reporter [Questa UVM]  questa_uvm::init(+struct)
+# UVM_INFO @ 0: reporter [RNTST] Running test exhaustive_seq_test...
+# UVM_INFO /home/sucharitha/Downloads/laptop/lab06/tb/../sv/../tb/router_test_lib.sv(215) @ 0: uvm_test_top [exhaustive_seq_test] build_phase
+# UVM_INFO /home/sucharitha/Downloads/laptop/lab06/tb/../sv/yapp_tx_sequencer.sv(27) @ 0: uvm_test_top.router_inst.env.agent.sequencer [sequencer] build_phase
+# UVM_INFO /home/sucharitha/Downloads/laptop/lab06/tb/../sv/yapp_tx_sequencer.sv(32) @ 0: uvm_test_top.router_inst.env.agent.sequencer [sequencer] connect_phase
+# UVM_INFO /home/sucharitha/Downloads/laptop/lab06/tb/../sv/yapp_env.sv(33) @ 0: uvm_test_top.router_inst.env [environment] connect_phase
+# UVM_INFO /home/sucharitha/Downloads/laptop/lab06/tb/../sv/../tb/router_tb.sv(33) @ 0: uvm_test_top.router_inst [router_tb] connect phase
+# UVM_INFO /home/sucharitha/Downloads/laptop/lab06/tb/../sv/../tb/router_test_lib.sv(82) @ 0: uvm_test_top [base_test] connect_phase
+# UVM_INFO /home/sucharitha/Downloads/laptop/lab06/tb/../sv/../tb/router_test_lib.sv(220) @ 0: uvm_test_top [exhaustive_seq_test] connect_phase
+# UVM_INFO /home/sucharitha/Downloads/laptop/lab06/tb/../sv/yapp_tx_sequencer.sv(36) @ 0: uvm_test_top.router_inst.env.agent.sequencer [sequencer] end_of_elaboration_phase
+# UVM_INFO /home/sucharitha/Downloads/laptop/lab06/tb/../sv/yapp_tx_agent.sv(46) @ 0: uvm_test_top.router_inst.env.agent [agent] end_of_elaboration_phase
+# UVM_INFO /home/sucharitha/Downloads/laptop/lab06/tb/../sv/yapp_env.sv(37) @ 0: uvm_test_top.router_inst.env [environment] end_of_elaboration_phase
+# UVM_INFO @ 0: reporter [UVMTOP] UVM testbench topology:
+# ----------------------------------------------------------------
+# Name                         Type                    Size  Value
+# ----------------------------------------------------------------
+# uvm_test_top                 exhaustive_seq_test     -     @478 
+#   router_inst                router_tb               -     @485 
+#     env                      yapp_env                -     @540 
+#       agent                  yapp_tx_agent           -     @547 
+#         driver               yapp_tx_driver          -     @562 
+#           rsp_port           uvm_analysis_port       -     @577 
+#           seq_item_port      uvm_seq_item_pull_port  -     @569 
+#         monitor              yapp_tx_monitor         -     @555 
+#         sequencer            yapp_tx_sequencer       -     @585 
+#           rsp_export         uvm_analysis_export     -     @592 
+#           seq_item_export    uvm_seq_item_pull_imp   -     @686 
+#           arbitration_queue  array                   0     -    
+#           lock_queue         array                   0     -    
+#           num_last_reqs      integral                32    'd1  
+#           num_last_rsps      integral                32    'd1  
+# ----------------------------------------------------------------
+# 
+# ------------------------------------------------------------------------
+# Name                  Type                   Size  Value                
+# ------------------------------------------------------------------------
+# sequence_lib          yapp_seq_lib           -     @496                 
+#   min_random_count    int unsigned           32    'd1                  
+#   max_random_count    int unsigned           32    'd7                  
+#  # ** Error: Failure to obtain a Verilog simulation license. Unable to checkout any of these license features: 'qhsimvl' or 'msimhdlsim'.
+# ** Error: Failure to checkout svverification license feature.
+                    
+#   sequences           queue_object_types     7     -                    
+#     [0]               uvm_object_wrapper     45    yapp_012_seq         
+#     [1]               uvm_object_wrapper     45    yapp_1_seq           
+#     [2]               uvm_object_wrapper     45    yapp_111_seq         
+#     [3]               uvm_object_wrapper     45    yapp_repeat_addr_seq 
+#     [4]               uvm_object_wrapper     45    yapp_incr_payload_seq
+#     [5]               uvm_object_wrapper     45    yapp_rnd_seq         
+#     [6]               uvm_object_wrapper     45    six_yapp_seq         
+#   seqs_distrib        as_int_string          0     -                    
+# ------------------------------------------------------------------------
+# UVM_INFO /home/sucharitha/Downloads/laptop/lab06/tb/../sv/yapp_tx_sequencer.sv(40) @ 0: uvm_test_top.router_inst.env.agent.sequencer [sequencer] start_of_simulation_phase
+# UVM_INFO /home/sucharitha/Downloads/laptop/lab06/tb/../sv/yapp_tx_agent.sv(50) @ 0: uvm_test_top.router_inst.env.agent [agent] start_of_simulation_phase
+# UVM_INFO /home/sucharitha/Downloads/laptop/lab06/tb/../sv/yapp_env.sv(41) @ 0: uvm_test_top.router_inst.env [environment] start_of_simulation_phase
+# UVM_INFO /home/sucharitha/Downloads/laptop/lab06/tb/../sv/../tb/router_tb.sv(41) @ 0: uvm_test_top.router_inst [router_tb] start_of_simulation_phase
+# UVM_INFO /home/sucharitha/Downloads/laptop/lab06/tb/../sv/../tb/router_test_lib.sv(228) @ 0: uvm_test_top [exhaustive_seq_test] start_of_simulation_phase
+# UVM_INFO /home/sucharitha/Downloads/laptop/lab06/tb/../sv/../tb/router_test_lib.sv(232) @ 0: uvm_test_top [exhaustive_seq_test] run_phase
+# UVM_INFO /home/sucharitha/Downloads/laptop/lab06/tb/../sv/../tb/router_tb.sv(45) @ 0: uvm_test_top.router_inst [router_tb] run_phase
+# UVM_INFO /home/sucharitha/Downloads/laptop/lab06/tb/../sv/yapp_env.sv(45) @ 0: uvm_test_top.router_inst.env [environment] run_phase
+# UVM_INFO /home/sucharitha/Downloads/laptop/lab06/tb/../sv/yapp_tx_agent.sv(54) @ 0: uvm_test_top.router_inst.env.agent [agent] run_phase
+# UVM_INFO /home/sucharitha/Downloads/laptop/lab06/tb/../sv/yapp_tx_sequencer.sv(44) @ 0: uvm_test_top.router_inst.env.agent.sequencer [sequencer] run_phase
+# UVM_INFO /home/sucharitha/Downloads/laptop/lab06/tb/../sv/yapp_tx_monitor.sv(67) @ 0: uvm_test_top.router_inst.env.agent.monitor [yapp_tx_monitor] yapp_tx_monitor class
+# UVM_INFO verilog_src/uvm-1.1d/src/seq/uvm_sequence_library.svh(660) @ 0: uvm_test_top.router_inst.env.agent.sequencer@@sequence_lib [SEQLIB/START] Starting sequence library yapp_seq_lib in run phase: 7 iterations in mode UVM_SEQ_LIB_RANDC
+# UVM_INFO /home/sucharitha/Downloads/laptop/lab06/tb/../sv/yapp_tx_seqs.sv(119) @ 0: uvm_test_top.router_inst.env.agent.sequencer@@sequence_lib.yapp_012_seq:1 [sequences] yapp_012_seq
+# UVM_INFO /home/sucharitha/Downloads/laptop/lab06/tb/../sv/yapp_tx_driver.sv(44) @ 20: uvm_test_top.router_inst.env.agent.driver [yapp_tx_driver] Reset dropped
+# UVM_INFO /home/sucharitha/Downloads/laptop/lab06/tb/../sv/yapp_tx_monitor.sv(60) @ 185: uvm_test_top.router_inst.env.agent.monitor [yapp_tx_monitor] Packet Collected :
+# ------------------------------------------------------
+# Name              Type               Size  Value      
+# ------------------------------------------------------
+# packet_collected  short_yapp_packet  -     @695       
+#   address         integral           2     'h0        
+#   length          integral           6     'h5        
+#   payload         da(integral)       5     -          
+#     [0]           integral           8     'h16       
+#     [1]           integral           8     'h89       
+#     [2]           integral           8     'h34       
+#     [3]           integral           8     'h2e       
+#     [4]           integral           8     'h37       
+#   parity          integral           8     'hb6       
+#   packet_delay    integral           32    'h0        
+#   parity_type     parity_t           32    GOOD_PARITY
+#   begin_time      time               64    125        
+#   end_time        time               64    185        
+# ------------------------------------------------------
+# 
+# UVM_INFO /home/sucharitha/Downloads/laptop/lab06/tb/../sv/yapp_tx_monitor.sv(62) @ 185: uvm_test_top.router_inst.env.agent.monitor [yapp_tx_monitor] count in monitor num_pkt_col=          1 
+# *** ROUTER (DUT) Parity Error Identified: Expected:96 Computed:a6 ***
+# UVM_INFO /home/sucharitha/Downloads/laptop/lab06/tb/../sv/yapp_tx_monitor.sv(60) @ 305: uvm_test_top.router_inst.env.agent.monitor [yapp_tx_monitor] Packet Collected :
+# ------------------------------------------------------
+# Name              Type               Size  Value      
+# ------------------------------------------------------
+# packet_collected  short_yapp_packet  -     @695       
+#   address         integral           2     'h1        
+#   length          integral           6     'h1        
+#   payload         da(integral)       1     -          
+#     [0]           integral           8     'hae       
+#   parity          integral           8     'haf       
+#   packet_delay    integral           32    'h0        
+#   parity_type     parity_t           32    GOOD_PARITY
+#   begin_time      time               64    285        
+#   end_time        time               64    305        
+# ------------------------------------------------------
+# 
+# UVM_INFO /home/sucharitha/Downloads/laptop/lab06/tb/../sv/yapp_tx_monitor.sv(62) @ 305: uvm_test_top.router_inst.env.agent.monitor [yapp_tx_monitor] count in monitor num_pkt_col=          2 
+# *** ROUTER (DUT) Parity Error Identified: Expected:af Computed:ab ***
+# UVM_INFO /home/sucharitha/Downloads/laptop/lab06/tb/../sv/yapp_tx_monitor.sv(60) @ 585: uvm_test_top.router_inst.env.agent.monitor [yapp_tx_monitor] Packet Collected :
+# ------------------------------------------------------
+# Name              Type               Size  Value      
+# ------------------------------------------------------
+# packet_collected  short_yapp_packet  -     @695       
+#   address         integral           2     'h2        
+#   length          integral           6     'hc        
+#   payload         da(integral)       12    -          
+#     [0]           integral           8     'h87       
+#     [1]           integral           8     'hae       
+#     [2]           integral           8     'hd0       
+#     [3]           integral           8     'h9d       
+#     [4]           integral           8     'h47       
+#     ...           ...                ...   ...        
+#     [7]           integral           8     'hc7       
+#     [8]           integral           8     'hd1       
+#     [9]           integral           8     'h54       
+#     [10]          integral           8     'h60       
+#     [11]          integral           8     'h5f       
+#   parity          integral           8     'h67       
+#   packet_delay    integral           32    'h0        
+#   parity_type     parity_t           32    GOOD_PARITY
+#   begin_time      time               64    455        
+#   end_time        time               64    585        
+# ------------------------------------------------------
+# 
+# UVM_INFO /home/sucharitha/Downloads/laptop/lab06/tb/../sv/yapp_tx_monitor.sv(62) @ 585: uvm_test_top.router_inst.env.agent.monitor [yapp_tx_monitor] count in monitor num_pkt_col=          3 
+# *** ROUTER (DUT) Parity Error Identified: Expected:e7 Computed:5a ***
+# UVM_INFO /home/sucharitha/Downloads/laptop/lab06/tb/../sv/yapp_tx_seqs.sv(181) @ 590: uvm_test_top.router_inst.env.agent.sequencer@@sequence_lib.six_yapp_seq:2 [sequences] six_yapp_seq
+# UVM_INFO /home/sucharitha/Downloads/laptop/lab06/tb/../sv/yapp_tx_seqs.sv(169) @ 590: uvm_test_top.router_inst.env.agent.sequencer@@sequence_lib.six_yapp_seq:2 [sequences] yapp_rnd_seq
+# UVM_INFO /home/sucharitha/Downloads/laptop/lab06/tb/../sv/yapp_tx_monitor.sv(60) @ 775: uvm_test_top.router_inst.env.agent.monitor [yapp_tx_monitor] Packet Collected :
+# ------------------------------------------------------
+# Name              Type               Size  Value      
+# ------------------------------------------------------
+# packet_collected  short_yapp_packet  -     @695       
+#   address         integral           2     'h1        
+#   length          integral           6     'h8        
+#   payload         da(integral)       8     -          
+#     [0]           integral           8     'h5b       
+#     [1]           integral           8     'hfa       
+#     [2]           integral           8     'he8       
+#     [3]           integral           8     'h56       
+#     [4]           integral           8     'hb        
+#     [5]           integral           8     'h7d       
+#     [6]           integral           8     'h83       
+#     [7]           integral           8     'hb2       
+#   parity          integral           8     'h50       
+#   packet_delay    integral           32    'h0        
+#   parity_type     parity_t           32    GOOD_PARITY
+#   begin_time      time               64    685        
+#   end_time        time               64    775        
+# ------------------------------------------------------
+# 
+# UVM_INFO /home/sucharitha/Downloads/laptop/lab06/tb/../sv/yapp_tx_monitor.sv(62) @ 775: uvm_test_top.router_inst.env.agent.monitor [yapp_tx_monitor] count in monitor num_pkt_col=          4 
+# *** ROUTER (DUT) Parity Error Identified: Expected:50 Computed:79 ***
+# UVM_INFO /home/sucharitha/Downloads/laptop/lab06/tb/../sv/yapp_tx_monitor.sv(60) @ 895: uvm_test_top.router_inst.env.agent.monitor [yapp_tx_monitor] Packet Collected :
+# ------------------------------------------------------
+# Name              Type               Size  Value      
+# ------------------------------------------------------
+# packet_collected  short_yapp_packet  -     @695       
+#   address         integral           2     'h0        
+#   length          integral           6     'h6        
+#   payload         da(integral)       6     -          
+#     [0]           integral           8     'ha7       
+#     [1]           integral           8     'h22       
+#     [2]           integral           8     'h1e       
+#     [3]           integral           8     'h51       
+#     [4]           integral           8     'hc2       
+#     [5]           integral           8     'hb2       
+#   parity          integral           8     'hbd       
+#   packet_delay    integral           32    'h0        
+#   parity_type     parity_t           32    GOOD_PARITY
+#   begin_time      time               64    825        
+#   end_time        time               64    895        
+# ------------------------------------------------------
+# 
+# UVM_INFO /home/sucharitha/Downloads/laptop/lab06/tb/../sv/yapp_tx_monitor.sv(62) @ 895: uvm_test_top.router_inst.env.agent.monitor [yapp_tx_monitor] count in monitor num_pkt_col=          5 
+# *** ROUTER (DUT) Parity Error Identified: Expected:bd Computed:a2 ***
+# UVM_INFO /home/sucharitha/Downloads/laptop/lab06/tb/../sv/yapp_tx_monitor.sv(60) @ 1195: uvm_test_top.router_inst.env.agent.monitor [yapp_tx_monitor] Packet Collected :
+# ------------------------------------------------------
+# Name              Type               Size  Value      
+# ------------------------------------------------------
+# packet_collected  short_yapp_packet  -     @695       
+#   address         integral           2     'h0        
+#   length          integral           6     'hb        
+#   payload         da(integral)       11    -          
+#     [0]           integral           8     'hf3       
+#     [1]           integral           8     'hb8       
+#     [2]           integral           8     'ha4       
+#     [3]           integral           8     'h8        
+#     [4]           integral           8     'h4e       
+#     ...           ...                ...   ...        
+#     [6]           integral           8     'hb6       
+#     [7]           integral           8     'h33       
+#     [8]           integral           8     'h3c       
+#     [9]           integral           8     'h76       
+#     [10]          integral           8     'h44       
+#   parity          integral           8     'h70       
+#   packet_delay    integral           32    'h0        
+#   parity_type     parity_t           32    GOOD_PARITY
+#   begin_time      time               64    1075       
+#   end_time        time               64    1195       
+# ------------------------------------------------------
+# 
+# UVM_INFO /home/sucharitha/Downloads/laptop/lab06/tb/../sv/yapp_tx_monitor.sv(62) @ 1195: uvm_test_top.router_inst.env.agent.monitor [yapp_tx_monitor] count in monitor num_pkt_col=          6 
+# *** ROUTER (DUT) Parity Error Identified: Expected:70 Computed:56 ***
+# UVM_INFO /home/sucharitha/Downloads/laptop/lab06/tb/../sv/yapp_tx_monitor.sv(60) @ 1375: uvm_test_top.router_inst.env.agent.monitor [yapp_tx_monitor] Packet Collected :
+# ------------------------------------------------------
+# Name              Type               Size  Value      
+# ------------------------------------------------------
+# packet_collected  short_yapp_packet  -     @695       
+#   address         integral           2     'h0        
+#   length          integral           6     'h4        
+#   payload         da(integral)       4     -          
+#     [0]           integral           8     'hc6       
+#     [1]           integral           8     'ha9       
+#     [2]           integral           8     'h72       
+#     [3]           integral           8     'hd4       
+#   parity          integral           8     'hcc       
+#   packet_delay    integral           32    'h0        
+#   parity_type     parity_t           32    GOOD_PARITY
+#   begin_time      time               64    1325       
+#   end_time        time               64    1375       
+# ------------------------------------------------------
+# 
+# UVM_INFO /home/sucharitha/Downloads/laptop/lab06/tb/../sv/yapp_tx_monitor.sv(62) @ 1375: uvm_test_top.router_inst.env.agent.monitor [yapp_tx_monitor] count in monitor num_pkt_col=          7 
+# *** ROUTER (DUT) Parity Error Identified: Expected:8c Computed:d9 ***
+# UVM_INFO /home/sucharitha/Downloads/laptop/lab06/tb/../sv/yapp_tx_monitor.sv(60) @ 1565: uvm_test_top.router_inst.env.agent.monitor [yapp_tx_monitor] Packet Collected :
+# ------------------------------------------------------
+# Name              Type               Size  Value      
+# ------------------------------------------------------
+# packet_collected  short_yapp_packet  -     @695       
+#   address         integral           2     'h0        
+#   length          integral           6     'h3        
+#   payload         da(integral)       3     -          
+#     [0]           integral           8     'h8e       
+#     [1]           integral           8     'h43       
+#     [2]           integral           8     'h39       
+#   parity          integral           8     'hf6       
+#   packet_delay    integral           32    'h0        
+#   parity_type     parity_t           32    GOOD_PARITY
+#   begin_time      time               64    1525       
+#   end_time        time               64    1565       
+# ------------------------------------------------------
+# 
+# UVM_INFO /home/sucharitha/Downloads/laptop/lab06/tb/../sv/yapp_tx_monitor.sv(62) @ 1565: uvm_test_top.router_inst.env.agent.monitor [yapp_tx_monitor] count in monitor num_pkt_col=          8 
+# *** ROUTER (DUT) Parity Error Identified: Expected:f6 Computed:f8 ***
+# UVM_INFO /home/sucharitha/Downloads/laptop/lab06/tb/../sv/yapp_tx_monitor.sv(60) @ 1765: uvm_test_top.router_inst.env.agent.monitor [yapp_tx_monitor] Packet Collected :
+# ------------------------------------------------------
+# Name              Type               Size  Value      
+# ------------------------------------------------------
+# packet_collected  short_yapp_packet  -     @695       
+#   address         integral           2     'h0        
+#   length          integral           6     'hb        
+#   payload         da(integral)       11    -          
+#     [0]           integral           8     'h47       
+#     [1]           integral           8     'hd6       
+#     [2]           integral           8     'hea       
+#     [3]           integral           8     'he4       
+#     [4]           integral           8     'hc7       
+#     ...           ...                ...   ...        
+#     [6]           integral           8     'hc        
+#     [7]           integral           8     'h37       
+#     [8]           integral           8     'h19       
+#     [9]           integral           8     'h3d       
+#     [10]          integral           8     'h19       
+#   parity          integral           8     'h10       
+#   packet_delay    integral           32    'h0        
+#   parity_type     parity_t           32    GOOD_PARITY
+#   begin_time      time               64    1645       
+#   end_time        time               64    1765       
+# ------------------------------------------------------
+# 
+# UVM_INFO /home/sucharitha/Downloads/laptop/lab06/tb/../sv/yapp_tx_monitor.sv(62) @ 1765: uvm_test_top.router_inst.env.agent.monitor [yapp_tx_monitor] count in monitor num_pkt_col=          9 
+# *** ROUTER (DUT) Parity Error Identified: Expected:10 Computed:36 ***
+# UVM_INFO /home/sucharitha/Downloads/laptop/lab06/tb/../sv/yapp_tx_seqs.sv(156) @ 1770: uvm_test_top.router_inst.env.agent.sequencer@@sequence_lib.yapp_incr_payload_seq:3 [sequences] yapp_incr_payload_seq
+# UVM_INFO /home/sucharitha/Downloads/laptop/lab06/tb/../sv/yapp_tx_monitor.sv(60) @ 2025: uvm_test_top.router_inst.env.agent.monitor [yapp_tx_monitor] Packet Collected :
+# ------------------------------------------------------
+# Name              Type               Size  Value      
+# ------------------------------------------------------
+# packet_collected  short_yapp_packet  -     @695       
+#   address         integral           2     'h0        
+#   length          integral           6     'hb        
+#   payload         da(integral)       11    -          
+#     [0]           integral           8     'h0        
+#     [1]           integral           8     'h16       
+#     [2]           integral           8     'h74       
+#     [3]           integral           8     'h56       
+#     [4]           integral           8     'he9       
+#     ...           ...                ...   ...        
+#     [6]           integral           8     'ha0       
+#     [7]           integral           8     'he9       
+#     [8]           integral           8     'hd3       
+#     [9]           integral           8     'h52       
+#     [10]          integral           8     'hb4       
+#   parity          integral           8     'h81       
+#   packet_delay    integral           32    'h0        
+#   parity_type     parity_t           32    GOOD_PARITY
+#   begin_time      time               64    1905       
+#   end_time        time               64    2025       
+# ------------------------------------------------------
+# 
+# UVM_INFO /home/sucharitha/Downloads/laptop/lab06/tb/../sv/yapp_tx_monitor.sv(62) @ 2025: uvm_test_top.router_inst.env.agent.monitor [yapp_tx_monitor] count in monitor num_pkt_col=         10 
+# *** ROUTER (DUT) Parity Error Identified: Expected:12 Computed:a7 ***
+# UVM_INFO /home/sucharitha/Downloads/laptop/lab06/tb/../sv/yapp_tx_monitor.sv(60) @ 2285: uvm_test_top.router_inst.env.agent.monitor [yapp_tx_monitor] Packet Collected :
+# ------------------------------------------------------
+# Name              Type               Size  Value      
+# ------------------------------------------------------
+# packet_collected  short_yapp_packet  -     @695       
+#   address         integral           2     'h0        
+#   length          integral           6     'hb        
+#   payload         da(integral)       11    -          
+#     [0]           integral           8     'h0        
+#     [1]           integral           8     'h1        
+#     [2]           integral           8     'h74       
+#     [3]           integral           8     'h56       
+#     [4]           integral           8     'he9       
+#     ...           ...                ...   ...        
+#     [6]           integral           8     'ha0       
+#     [7]           integral           8     'he9       
+#     [8]           integral           8     'hd3       
+#     [9]           integral           8     'h52       
+#     [10]          integral           8     'hb4       
+#   parity          integral           8     'h96       
+#   packet_delay    integral           32    'h0        
+#   parity_type     parity_t           32    GOOD_PARITY
+#   begin_time      time               64    2165       
+#   end_time        time               64    2285       
+# ------------------------------------------------------
+# 
+# UVM_INFO /home/sucharitha/Downloads/laptop/lab06/tb/../sv/yapp_tx_monitor.sv(62) @ 2285: uvm_test_top.router_inst.env.agent.monitor [yapp_tx_monitor] count in monitor num_pkt_col=         11 
+# *** ROUTER (DUT) Parity Error Identified: Expected:12 Computed:b0 ***
+# UVM_INFO /home/sucharitha/Downloads/laptop/lab06/tb/../sv/yapp_tx_monitor.sv(60) @ 2545: uvm_test_top.router_inst.env.agent.monitor [yapp_tx_monitor] Packet Collected :
+# ------------------------------------------------------
+# Name              Type               Size  Value      
+# ------------------------------------------------------
+# packet_collected  short_yapp_packet  -     @695       
+#   address         integral           2     'h0        
+#   length          integral           6     'hb        
+#   payload         da(integral)       11    -          
+#     [0]           integral           8     'h0        
+#     [1]           integral           8     'h1        
+#     [2]           integral           8     'h2        
+#     [3]           integral           8     'h56       
+#     [4]           integral           8     'he9       
+#     ...           ...                ...   ...        
+#     [6]           integral           8     'ha0       
+#     [7]           integral           8     'he9       
+#     [8]           integral           8     'hd3       
+#     [9]           integral           8     'h52       
+#     [10]          integral           8     'hb4       
+#   parity          integral           8     'he0       
+#   packet_delay    integral           32    'h0        
+#   parity_type     parity_t           32    GOOD_PARITY
+#   begin_time      time               64    2425       
+#   end_time        time               64    2545       
+# ------------------------------------------------------
+# 
+# UVM_INFO /home/sucharitha/Downloads/laptop/lab06/tb/../sv/yapp_tx_monitor.sv(62) @ 2545: uvm_test_top.router_inst.env.agent.monitor [yapp_tx_monitor] count in monitor num_pkt_col=         12 
+# *** ROUTER (DUT) Parity Error Identified: Expected:12 Computed:c6 ***
+# UVM_INFO /home/sucharitha/Downloads/laptop/lab06/tb/../sv/yapp_tx_monitor.sv(60) @ 2805: uvm_test_top.router_inst.env.agent.monitor [yapp_tx_monitor] Packet Collected :
+# ------------------------------------------------------
+# Name              Type               Size  Value      
+# ------------------------------------------------------
+# packet_collected  short_yapp_packet  -     @695       
+#   address         integral           2     'h0        
+#   length          integral           6     'hb        
+#   payload         da(integral)       11    -          
+#     [0]           integral           8     'h0        
+#     [1]           integral           8     'h1        
+#     [2]           integral           8     'h2        
+#     [3]           integral           8     'h3        
+#     [4]           integral           8     'he9       
+#     ...           ...                ...   ...        
+#     [6]           integral           8     'ha0       
+#     [7]           integral           8     'he9       
+#     [8]           integral           8     'hd3       
+#     [9]           integral           8     'h52       
+#     [10]          integral           8     'hb4       
+#   parity          integral           8     'hb5       
+#   packet_delay    integral           32    'h0        
+#   parity_type     parity_t           32    GOOD_PARITY
+#   begin_time      time               64    2685       
+#   end_time        time               64    2805       
+# ------------------------------------------------------
+# 
+# UVM_INFO /home/sucharitha/Downloads/laptop/lab06/tb/../sv/yapp_tx_monitor.sv(62) @ 2805: uvm_test_top.router_inst.env.agent.monitor [yapp_tx_monitor] count in monitor num_pkt_col=         13 
+# *** ROUTER (DUT) Parity Error Identified: Expected:12 Computed:93 ***
+# UVM_INFO /home/sucharitha/Downloads/laptop/lab06/tb/../sv/yapp_tx_monitor.sv(60) @ 3065: uvm_test_top.router_inst.env.agent.monitor [yapp_tx_monitor] Packet Collected :
+# ------------------------------------------------------
+# Name              Type               Size  Value      
+# ------------------------------------------------------
+# packet_collected  short_yapp_packet  -     @695       
+#   address         integral           2     'h0        
+#   length          integral           6     'hb        
+#   payload         da(integral)       11    -          
+#     [0]           integral           8     'h0        
+#     [1]           integral           8     'h1        
+#     [2]           integral           8     'h2        
+#     [3]           integral           8     'h3        
+#     [4]           integral           8     'h4        
+#     ...           ...                ...   ...        
+#     [6]           integral           8     'ha0       
+#     [7]           integral           8     'he9       
+#     [8]           integral           8     'hd3       
+#     [9]           integral           8     'h52       
+#     [10]          integral           8     'hb4       
+#   parity          integral           8     'h58       
+#   packet_delay    integral           32    'h0        
+#   parity_type     parity_t           32    GOOD_PARITY
+#   begin_time      time               64    2945       
+#   end_time        time               64    3065       
+# ------------------------------------------------------
+# 
+# UVM_INFO /home/sucharitha/Downloads/laptop/lab06/tb/../sv/yapp_tx_monitor.sv(62) @ 3065: uvm_test_top.router_inst.env.agent.monitor [yapp_tx_monitor] count in monitor num_pkt_col=         14 
+# *** ROUTER (DUT) Parity Error Identified: Expected:12 Computed:7e ***
+# UVM_INFO /home/sucharitha/Downloads/laptop/lab06/tb/../sv/yapp_tx_monitor.sv(60) @ 3325: uvm_test_top.router_inst.env.agent.monitor [yapp_tx_monitor] Packet Collected :
+# ------------------------------------------------------
+# Name              Type               Size  Value      
+# ------------------------------------------------------
+# packet_collected  short_yapp_packet  -     @695       
+#   address         integral           2     'h0        
+#   length          integral           6     'hb        
+#   payload         da(integral)       11    -          
+#     [0]           integral           8     'h0        
+#     [1]           integral           8     'h1        
+#     [2]           integral           8     'h2        
+#     [3]           integral           8     'h3        
+#     [4]           integral           8     'h4        
+#     ...           ...                ...   ...        
+#     [6]           integral           8     'ha0       
+#     [7]           integral           8     'he9       
+#     [8]           integral           8     'hd3       
+#     [9]           integral           8     'h52       
+#     [10]          integral           8     'hb4       
+#   parity          integral           8     'h77       
+#   packet_delay    integral           32    'h0        
+#   parity_type     parity_t           32    GOOD_PARITY
+#   begin_time      time               64    3205       
+#   end_time        time               64    3325       
+# ------------------------------------------------------
+# 
+# UVM_INFO /home/sucharitha/Downloads/laptop/lab06/tb/../sv/yapp_tx_monitor.sv(62) @ 3325: uvm_test_top.router_inst.env.agent.monitor [yapp_tx_monitor] count in monitor num_pkt_col=         15 
+# *** ROUTER (DUT) Parity Error Identified: Expected:12 Computed:51 ***
+# UVM_INFO /home/sucharitha/Downloads/laptop/lab06/tb/../sv/yapp_tx_monitor.sv(60) @ 3585: uvm_test_top.router_inst.env.agent.monitor [yapp_tx_monitor] Packet Collected :
+# ------------------------------------------------------
+# Name              Type               Size  Value      
+# ------------------------------------------------------
+# packet_collected  short_yapp_packet  -     @695       
+#   address         integral           2     'h0        
+#   length          integral           6     'hb        
+#   payload         da(integral)       11    -          
+#     [0]           integral           8     'h0        
+#     [1]           integral           8     'h1        
+#     [2]           integral           8     'h2        
+#     [3]           integral           8     'h3        
+#     [4]           integral           8     'h4        
+#     ...           ...                ...   ...        
+#     [6]           integral           8     'h6        
+#     [7]           integral           8     'he9       
+#     [8]           integral           8     'hd3       
+#     [9]           integral           8     'h52       
+#     [10]          integral           8     'hb4       
+#   parity          integral           8     'hd1       
+#   packet_delay    integral           32    'h0        
+#   parity_type     parity_t           32    GOOD_PARITY
+#   begin_time      time               64    3465       
+#   end_time        time               64    3585       
+# ------------------------------------------------------
+# 
+# UVM_INFO /home/sucharitha/Downloads/laptop/lab06/tb/../sv/yapp_tx_monitor.sv(62) @ 3585: uvm_test_top.router_inst.env.agent.monitor [yapp_tx_monitor] count in monitor num_pkt_col=         16 
+# *** ROUTER (DUT) Parity Error Identified: Expected:12 Computed:f7 ***
+# UVM_INFO /home/sucharitha/Downloads/laptop/lab06/tb/../sv/yapp_tx_monitor.sv(60) @ 3845: uvm_test_top.router_inst.env.agent.monitor [yapp_tx_monitor] Packet Collected :
+# ------------------------------------------------------
+# Name              Type               Size  Value      
+# ------------------------------------------------------
+# packet_collected  short_yapp_packet  -     @695       
+#   address         integral           2     'h0        
+#   length          integral           6     'hb        
+#   payload         da(integral)       11    -          
+#     [0]           integral           8     'h0        
+#     [1]           integral           8     'h1        
+#     [2]           integral           8     'h2        
+#     [3]           integral           8     'h3        
+#     [4]           integral           8     'h4        
+#     ...           ...                ...   ...        
+#     [6]           integral           8     'h6        
+#     [7]           integral           8     'h7        
+#     [8]           integral           8     'hd3       
+#     [9]           integral           8     'h52       
+#     [10]          integral           8     'hb4       
+#   parity          integral           8     'h3f       
+#   packet_delay    integral           32    'h0        
+#   parity_type     parity_t           32    GOOD_PARITY
+#   begin_time      time               64    3725       
+#   end_time        time               64    3845       
+# ------------------------------------------------------
+# 
+# UVM_INFO /home/sucharitha/Downloads/laptop/lab06/tb/../sv/yapp_tx_monitor.sv(62) @ 3845: uvm_test_top.router_inst.env.agent.monitor [yapp_tx_monitor] count in monitor num_pkt_col=         17 
+# *** ROUTER (DUT) Parity Error Identified: Expected:12 Computed:19 ***
+# UVM_INFO /home/sucharitha/Downloads/laptop/lab06/tb/../sv/yapp_tx_monitor.sv(60) @ 4105: uvm_test_top.router_inst.env.agent.monitor [yapp_tx_monitor] Packet Collected :
+# ------------------------------------------------------
+# Name              Type               Size  Value      
+# ------------------------------------------------------
+# packet_collected  short_yapp_packet  -     @695       
+#   address         integral           2     'h0        
+#   length          integral           6     'hb        
+#   payload         da(integral)       11    -          
+#     [0]           integral           8     'h0        
+#     [1]           integral           8     'h1        
+#     [2]           integral           8     'h2        
+#     [3]           integral           8     'h3        
+#     [4]           integral           8     'h4        
+#     ...           ...                ...   ...        
+#     [6]           integral           8     'h6        
+#     [7]           integral           8     'h7        
+#     [8]           integral           8     'h8        
+#     [9]           integral           8     'h52       
+#     [10]          integral           8     'hb4       
+#   parity          integral           8     'he4       
+#   packet_delay    integral           32    'h0        
+#   parity_type     parity_t           32    GOOD_PARITY
+#   begin_time      time               64    3985       
+#   end_time        time               64    4105       
+# ------------------------------------------------------
+# 
+# UVM_INFO /home/sucharitha/Downloads/laptop/lab06/tb/../sv/yapp_tx_monitor.sv(62) @ 4105: uvm_test_top.router_inst.env.agent.monitor [yapp_tx_monitor] count in monitor num_pkt_col=         18 
+# *** ROUTER (DUT) Parity Error Identified: Expected:12 Computed:c2 ***
+# UVM_INFO /home/sucharitha/Downloads/laptop/lab06/tb/../sv/yapp_tx_monitor.sv(60) @ 4365: uvm_test_top.router_inst.env.agent.monitor [yapp_tx_monitor] Packet Collected :
+# ------------------------------------------------------
+# Name              Type               Size  Value      
+# ------------------------------------------------------
+# packet_collected  short_yapp_packet  -     @695       
+#   address         integral           2     'h0        
+#   length          integral           6     'hb        
+#   payload         da(integral)       11    -          
+#     [0]           integral           8     'h0        
+#     [1]           integral           8     'h1        
+#     [2]           integral           8     'h2        
+#     [3]           integral           8     'h3        
+#     [4]           integral           8     'h4        
+#     ...           ...                ...   ...        
+#     [6]           integral           8     'h6        
+#     [7]           integral           8     'h7        
+#     [8]           integral           8     'h8        
+#     [9]           integral           8     'h9        
+#     [10]          integral           8     'hb4       
+#   parity          integral           8     'hbf       
+#   packet_delay    integral           32    'h0        
+#   parity_type     parity_t           32    GOOD_PARITY
+#   begin_time      time               64    4245       
+#   end_time        time               64    4365       
+# ------------------------------------------------------
+# 
+# UVM_INFO /home/sucharitha/Downloads/laptop/lab06/tb/../sv/yapp_tx_monitor.sv(62) @ 4365: uvm_test_top.router_inst.env.agent.monitor [yapp_tx_monitor] count in monitor num_pkt_col=         19 
+# *** ROUTER (DUT) Parity Error Identified: Expected:12 Computed:99 ***
+# UVM_INFO /home/sucharitha/Downloads/laptop/lab06/tb/../sv/yapp_tx_monitor.sv(60) @ 4625: uvm_test_top.router_inst.env.agent.monitor [yapp_tx_monitor] Packet Collected :
+# ------------------------------------------------------
+# Name              Type               Size  Value      
+# ------------------------------------------------------
+# packet_collected  short_yapp_packet  -     @695       
+#   address         integral           2     'h0        
+#   length          integral           6     'hb        
+#   payload         da(integral)       11    -          
+#     [0]           integral           8     'h0        
+#     [1]           integral           8     'h1        
+#     [2]           integral           8     'h2        
+#     [3]           integral           8     'h3        
+#     [4]           integral           8     'h4        
+#     ...           ...                ...   ...        
+#     [6]           integral           8     'h6        
+#     [7]           integral           8     'h7        
+#     [8]           integral           8     'h8        
+#     [9]           integral           8     'h9        
+#     [10]          integral           8     'ha        
+#   parity          integral           8     'h1        
+#   packet_delay    integral           32    'h0        
+#   parity_type     parity_t           32    GOOD_PARITY
+#   begin_time      time               64    4505       
+#   end_time        time               64    4625       
+# ------------------------------------------------------
+# 
+# UVM_INFO /home/sucharitha/Downloads/laptop/lab06/tb/../sv/yapp_tx_monitor.sv(62) @ 4625: uvm_test_top.router_inst.env.agent.monitor [yapp_tx_monitor] count in monitor num_pkt_col=         20 
+# *** ROUTER (DUT) Parity Error Identified: Expected:12 Computed:27 ***
+# UVM_INFO /home/sucharitha/Downloads/laptop/lab06/tb/../sv/yapp_tx_seqs.sv(146) @ 4630: uvm_test_top.router_inst.env.agent.sequencer@@sequence_lib.yapp_repeat_addr_seq:4 [sequences] yapp_repeat_addr_seq
+# UVM_INFO /home/sucharitha/Downloads/laptop/lab06/tb/../sv/yapp_tx_monitor.sv(60) @ 4945: uvm_test_top.router_inst.env.agent.monitor [yapp_tx_monitor] Packet Collected :
+# ------------------------------------------------------
+# Name              Type               Size  Value      
+# ------------------------------------------------------
+# packet_collected  short_yapp_packet  -     @695       
+#   address         integral           2     'h1        
+#   length          integral           6     'hd        
+#   payload         da(integral)       13    -          
+#     [0]           integral           8     'hf4       
+#     [1]           integral           8     'h86       
+#     [2]           integral           8     'h91       
+#     [3]           integral           8     'he5       
+#     [4]           integral           8     'h47       
+#     ...           ...                ...   ...        
+#     [8]           integral           8     'hdf       
+#     [9]           integral           8     'h7f       
+#     [10]          integral           8     'hb6       
+#     [11]          integral           8     'hdb       
+#     [12]          integral           8     'h9e       
+#   parity          integral           8     'h82       
+#   packet_delay    integral           32    'h0        
+#   parity_type     parity_t           32    GOOD_PARITY
+#   begin_time      time               64    4805       
+#   end_time        time               64    4945       
+# ------------------------------------------------------
+# 
+# UVM_INFO /home/sucharitha/Downloads/laptop/lab06/tb/../sv/yapp_tx_monitor.sv(62) @ 4945: uvm_test_top.router_inst.env.agent.monitor [yapp_tx_monitor] count in monitor num_pkt_col=         21 
+# *** ROUTER (DUT) Parity Error Identified: Expected:82 Computed:ba ***
+# UVM_INFO /home/sucharitha/Downloads/laptop/lab06/tb/../sv/yapp_tx_monitor.sv(60) @ 5055: uvm_test_top.router_inst.env.agent.monitor [yapp_tx_monitor] Packet Collected :
+# ------------------------------------------------------
+# Name              Type               Size  Value      
+# ------------------------------------------------------
+# packet_collected  short_yapp_packet  -     @695       
+#   address         integral           2     'h1        
+#   length          integral           6     'h8        
+#   payload         da(integral)       8     -          
+#     [0]           integral           8     'h1b       
+#     [1]           integral           8     'he8       
+#     [2]           integral           8     'h7a       
+#     [3]           integral           8     'h52       
+#     [4]           integral           8     'he        
+#     [5]           integral           8     'h62       
+#     [6]           integral           8     'h78       
+#     [7]           integral           8     'h1f       
+#   parity          integral           8     'hd8       
+#   packet_delay    integral           32    'h0        
+#   parity_type     parity_t           32    GOOD_PARITY
+#   begin_time      time               64    4965       
+#   end_time        time               64    5055       
+# ------------------------------------------------------
+# 
+# UVM_INFO /home/sucharitha/Downloads/laptop/lab06/tb/../sv/yapp_tx_monitor.sv(62) @ 5055: uvm_test_top.router_inst.env.agent.monitor [yapp_tx_monitor] count in monitor num_pkt_col=         22 
+# *** ROUTER (DUT) Parity Error Identified: Expected:d8 Computed:f1 ***
+# UVM_INFO /home/sucharitha/Downloads/laptop/lab06/tb/../sv/yapp_tx_seqs.sv(136) @ 5060: uvm_test_top.router_inst.env.agent.sequencer@@sequence_lib.yapp_111_seq:5 [sequences] yapp_111_seq
+# UVM_INFO /home/sucharitha/Downloads/laptop/lab06/tb/../sv/yapp_tx_seqs.sv(128) @ 5060: uvm_test_top.router_inst.env.agent.sequencer@@sequence_lib.yapp_111_seq:5 [sequences] yapp_1_seq
+# UVM_INFO /home/sucharitha/Downloads/laptop/lab06/tb/../sv/yapp_tx_monitor.sv(60) @ 5365: uvm_test_top.router_inst.env.agent.monitor [yapp_tx_monitor] Packet Collected :
+# ------------------------------------------------------
+# Name              Type               Size  Value      
+# ------------------------------------------------------
+# packet_collected  short_yapp_packet  -     @695       
+#   address         integral           2     'h1        
+#   length          integral           6     'hc        
+#   payload         da(integral)       12    -          
+#     [0]           integral           8     'h82       
+#     [1]           integral           8     'h87       
+#     [2]           integral           8     'h5c       
+#     [3]           integral           8     'hc7       
+#     [4]           integral           8     'he9       
+#     ...           ...                ...   ...        
+#     [7]           integral           8     'h89       
+#     [8]           integral           8     'haf       
+#     [9]           integral           8     'h6b       
+#     [10]          integral           8     'h85       
+#     [11]          integral           8     'hd4       
+#   parity          integral           8     'h51       
+#   packet_delay    integral           32    'h0        
+#   parity_type     parity_t           32    GOOD_PARITY
+#   begin_time      time               64    5235       
+#   end_time        time               64    5365       
+# ------------------------------------------------------
+# 
+# UVM_INFO /home/sucharitha/Downloads/laptop/lab06/tb/../sv/yapp_tx_monitor.sv(62) @ 5365: uvm_test_top.router_inst.env.agent.monitor [yapp_tx_monitor] count in monitor num_pkt_col=         23 
+# *** ROUTER (DUT) Parity Error Identified: Expected:51 Computed:6c ***
+# UVM_INFO /home/sucharitha/Downloads/laptop/lab06/tb/../sv/yapp_tx_seqs.sv(128) @ 5370: uvm_test_top.router_inst.env.agent.sequencer@@sequence_lib.yapp_111_seq:5 [sequences] yapp_1_seq
+# UVM_INFO /home/sucharitha/Downloads/laptop/lab06/tb/../sv/yapp_tx_monitor.sv(60) @ 5685: uvm_test_top.router_inst.env.agent.monitor [yapp_tx_monitor] Packet Collected :
+# ------------------------------------------------------
+# Name              Type               Size  Value      
+# ------------------------------------------------------
+# packet_collected  short_yapp_packet  -     @695       
+#   address         integral           2     'h1        
+#   length          integral           6     'hb        
+#   payload         da(integral)       11    -          
+#     [0]           integral           8     'h5e       
+#     [1]           integral           8     'he4       
+#     [2]           integral           8     'h9d       
+#     [3]           integral           8     'hf2       
+#     [4]           integral           8     'hd6       
+#     ...           ...                ...   ...        
+#     [6]           integral           8     'hf7       
+#     [7]           integral           8     'hd2       
+#     [8]           integral           8     'h35       
+#     [9]           integral           8     'h21       
+#     [10]          integral           8     'h2f       
+#   parity          integral           8     'h82       
+#   packet_delay    integral           32    'h0        
+#   parity_type     parity_t           32    GOOD_PARITY
+#   begin_time      time               64    5565       
+#   end_time        time               64    5685       
+# ------------------------------------------------------
+# 
+# UVM_INFO /home/sucharitha/Downloads/laptop/lab06/tb/../sv/yapp_tx_monitor.sv(62) @ 5685: uvm_test_top.router_inst.env.agent.monitor [yapp_tx_monitor] count in monitor num_pkt_col=         24 
+# *** ROUTER (DUT) Parity Error Identified: Expected:82 Computed:a4 ***
+# UVM_INFO /home/sucharitha/Downloads/laptop/lab06/tb/../sv/yapp_tx_seqs.sv(128) @ 5690: uvm_test_top.router_inst.env.agent.sequencer@@sequence_lib.yapp_111_seq:5 [sequences] yapp_1_seq
+# UVM_INFO /home/sucharitha/Downloads/laptop/lab06/tb/../sv/yapp_tx_monitor.sv(60) @ 5785: uvm_test_top.router_inst.env.agent.monitor [yapp_tx_monitor] Packet Collected :
+# ------------------------------------------------------
+# Name              Type               Size  Value      
+# ------------------------------------------------------
+# packet_collected  short_yapp_packet  -     @695       
+#   address         integral           2     'h1        
+#   length          integral           6     'h7        
+#   payload         da(integral)       7     -          
+#     [0]           integral           8     'he2       
+#     [1]           integral           8     'hf        
+#     [2]           integral           8     'h9f       
+#     [3]           integral           8     'ha2       
+#     [4]           integral           8     'hfe       
+#     [5]           integral           8     'h5f       
+#     [6]           integral           8     'hed       
+#   parity          integral           8     'h9b       
+#   packet_delay    integral           32    'h0        
+#   parity_type     parity_t           32    GOOD_PARITY
+#   begin_time      time               64    5705       
+#   end_time        time               64    5785       
+# ------------------------------------------------------
+# 
+# UVM_INFO /home/sucharitha/Downloads/laptop/lab06/tb/../sv/yapp_tx_monitor.sv(62) @ 5785: uvm_test_top.router_inst.env.agent.monitor [yapp_tx_monitor] count in monitor num_pkt_col=         25 
+# *** ROUTER (DUT) Parity Error Identified: Expected:9b Computed:81 ***
+# UVM_INFO /home/sucharitha/Downloads/laptop/lab06/tb/../sv/yapp_tx_seqs.sv(169) @ 5790: uvm_test_top.router_inst.env.agent.sequencer@@sequence_lib.yapp_rnd_seq:6 [sequences] yapp_rnd_seq
+# UVM_INFO /home/sucharitha/Downloads/laptop/lab06/tb/../sv/yapp_tx_monitor.sv(60) @ 5895: uvm_test_top.router_inst.env.agent.monitor [yapp_tx_monitor] Packet Collected :
+# ------------------------------------------------------
+# Name              Type               Size  Value      
+# ------------------------------------------------------
+# packet_collected  short_yapp_packet  -     @695       
+#   address         integral           2     'h0        
+#   length          integral           6     'h2        
+#   payload         da(integral)       2     -          
+#     [0]           integral           8     'hc6       
+#     [1]           integral           8     'h15       
+#   parity          integral           8     'hd0       
+#   packet_delay    integral           32    'h0        
+#   parity_type     parity_t           32    GOOD_PARITY
+#   begin_time      time               64    5865       
+#   end_time        time               64    5895       
+# ------------------------------------------------------
+# 
+# UVM_INFO /home/sucharitha/Downloads/laptop/lab06/tb/../sv/yapp_tx_monitor.sv(62) @ 5895: uvm_test_top.router_inst.env.agent.monitor [yapp_tx_monitor] count in monitor num_pkt_col=         26 
+# *** ROUTER (DUT) Parity Error Identified: Expected:d0 Computed:db ***
+# UVM_INFO /home/sucharitha/Downloads/laptop/lab06/tb/../sv/yapp_tx_monitor.sv(60) @ 6035: uvm_test_top.router_inst.env.agent.monitor [yapp_tx_monitor] Packet Collected :
+# ------------------------------------------------------
+# Name              Type               Size  Value      
+# ------------------------------------------------------
+# packet_collected  short_yapp_packet  -     @695       
+#   address         integral           2     'h0        
+#   length          integral           6     'h5        
+#   payload         da(integral)       5     -          
+#     [0]           integral           8     'h3d       
+#     [1]           integral           8     'h4f       
+#     [2]           integral           8     'h59       
+#     [3]           integral           8     'hfd       
+#     [4]           integral           8     'h8c       
+#   parity          integral           8     'h5e       
+#   packet_delay    integral           32    'h0        
+#   parity_type     parity_t           32    GOOD_PARITY
+#   begin_time      time               64    5975       
+#   end_time        time               64    6035       
+# ------------------------------------------------------
+# 
+# UVM_INFO /home/sucharitha/Downloads/laptop/lab06/tb/../sv/yapp_tx_monitor.sv(62) @ 6035: uvm_test_top.router_inst.env.agent.monitor [yapp_tx_monitor] count in monitor num_pkt_col=         27 
+# *** ROUTER (DUT) Parity Error Identified: Expected:5e Computed:4e ***
+# UVM_INFO /home/sucharitha/Downloads/laptop/lab06/tb/../sv/yapp_tx_seqs.sv(128) @ 6040: uvm_test_top.router_inst.env.agent.sequencer@@sequence_lib.yapp_1_seq:7 [sequences] yapp_1_seq
+# UVM_INFO /home/sucharitha/Downloads/laptop/lab06/tb/../sv/yapp_tx_monitor.sv(60) @ 6225: uvm_test_top.router_inst.env.agent.monitor [yapp_tx_monitor] Packet Collected :
+# ------------------------------------------------------
+# Name              Type               Size  Value      
+# ------------------------------------------------------
+# packet_collected  short_yapp_packet  -     @695       
+#   address         integral           2     'h1        
+#   length          integral           6     'h1        
+#   payload         da(integral)       1     -          
+#     [0]           integral           8     'h5f       
+#   parity          integral           8     'h5e       
+#   packet_delay    integral           32    'h0        
+#   parity_type     parity_t           32    GOOD_PARITY
+#   begin_time      time               64    6205       
+#   end_time        time               64    6225       
+# ------------------------------------------------------
+# 
+# UVM_INFO /home/sucharitha/Downloads/laptop/lab06/tb/../sv/yapp_tx_monitor.sv(62) @ 6225: uvm_test_top.router_inst.env.agent.monitor [yapp_tx_monitor] count in monitor num_pkt_col=         28 
+# *** ROUTER (DUT) Parity Error Identified: Expected:5e Computed:5a ***
+# UVM_INFO verilog_src/uvm-1.1d/src/seq/uvm_sequence_library.svh(737) @ 6230: uvm_test_top.router_inst.env.agent.sequencer@@sequence_lib [SEQLIB/END] Ending sequence library in phase run
+# UVM_INFO verilog_src/uvm-1.1d/src/base/uvm_objection.svh(1267) @ 6230: reporter [TEST_DONE] 'run' phase is ready to proceed to the 'extract' phase
+# UVM_INFO /home/sucharitha/Downloads/laptop/lab06/tb/../sv/yapp_tx_sequencer.sv(48) @ 6230: uvm_test_top.router_inst.env.agent.sequencer [sequencer] extract_phase
+# UVM_INFO /home/sucharitha/Downloads/laptop/lab06/tb/../sv/yapp_tx_agent.sv(58) @ 6230: uvm_test_top.router_inst.env.agent [agent] extract_phase
+# UVM_INFO /home/sucharitha/Downloads/laptop/lab06/tb/../sv/yapp_env.sv(49) @ 6230: uvm_test_top.router_inst.env [environment] extract_phase
+# UVM_INFO /home/sucharitha/Downloads/laptop/lab06/tb/../sv/../tb/router_tb.sv(49) @ 6230: uvm_test_top.router_inst [router_tb] extract_phase
+# UVM_INFO /home/sucharitha/Downloads/laptop/lab06/tb/../sv/../tb/router_test_lib.sv(236) @ 6230: uvm_test_top [exhaustive_seq_test] extract_phase
+# UVM_INFO /home/sucharitha/Downloads/laptop/lab06/tb/../sv/yapp_tx_sequencer.sv(52) @ 6230: uvm_test_top.router_inst.env.agent.sequencer [sequencer] check_phase
+# UVM_INFO /home/sucharitha/Downloads/laptop/lab06/tb/../sv/yapp_tx_agent.sv(62) @ 6230: uvm_test_top.router_inst.env.agent [agent] check_phase
+# UVM_INFO /home/sucharitha/Downloads/laptop/lab06/tb/../sv/yapp_env.sv(53) @ 6230: uvm_test_top.router_inst.env [environment] check_phase
+# UVM_INFO /home/sucharitha/Downloads/laptop/lab06/tb/../sv/../tb/router_tb.sv(53) @ 6230: uvm_test_top.router_inst [router_tb] check_phase
+# UVM_INFO /home/sucharitha/Downloads/laptop/lab06/tb/../sv/../tb/router_test_lib.sv(240) @ 6230: uvm_test_top [exhaustive_seq_test] check_phase
+# UVM_INFO /home/sucharitha/Downloads/laptop/lab06/tb/../sv/yapp_tx_driver.sv(93) @ 6230: uvm_test_top.router_inst.env.agent.driver [yapp_tx_driver] Report: YAPP TX driver sent 28 packets
+# UVM_INFO /home/sucharitha/Downloads/laptop/lab06/tb/../sv/yapp_tx_sequencer.sv(56) @ 6230: uvm_test_top.router_inst.env.agent.sequencer [sequencer] report_phase
+# UVM_INFO /home/sucharitha/Downloads/laptop/lab06/tb/../sv/yapp_tx_agent.sv(66) @ 6230: uvm_test_top.router_inst.env.agent [agent] report_phase
+# UVM_INFO /home/sucharitha/Downloads/laptop/lab06/tb/../sv/yapp_env.sv(57) @ 6230: uvm_test_top.router_inst.env [environment] report_phase
+# UVM_INFO /home/sucharitha/Downloads/laptop/lab06/tb/../sv/../tb/router_tb.sv(57) @ 6230: uvm_test_top.router_inst [router_tb] report_phase
+# UVM_INFO /home/sucharitha/Downloads/laptop/lab06/tb/../sv/../tb/router_test_lib.sv(244) @ 6230: uvm_test_top [exhaustive_seq_test] report_phase
+# UVM_INFO /home/sucharitha/Downloads/laptop/lab06/tb/../sv/../tb/router_test_lib.sv(248) @ 6230: uvm_test_top [exhaustive_seq_test] final_phase
+# UVM_INFO /home/sucharitha/Downloads/laptop/lab06/tb/../sv/../tb/router_tb.sv(61) @ 6230: uvm_test_top.router_inst [router_tb] final_phase
+# UVM_INFO /home/sucharitha/Downloads/laptop/lab06/tb/../sv/yapp_env.sv(61) @ 6230: uvm_test_top.router_inst.env [environment] final_phase
+# UVM_INFO /home/sucharitha/Downloads/laptop/lab06/tb/../sv/yapp_tx_agent.sv(70) @ 6230: uvm_test_top.router_inst.env.agent [agent] final_phase
+# UVM_INFO /home/sucharitha/Downloads/laptop/lab06/tb/../sv/yapp_tx_sequencer.sv(60) @ 6230: uvm_test_top.router_inst.env.agent.sequencer [sequencer] final_phase
+# 
+# --- UVM Report Summary ---
+# 
+# ** Report counts by severity
+# UVM_INFO :  117
+# UVM_WARNING :    0
+# UVM_ERROR :    0
+# UVM_FATAL :    0
+# ** Report counts by id
+# [Questa UVM]     2
+# [RNTST]     1
+# [SEQLIB/END]     1
+# [SEQLIB/START]     1
+# [TEST_DONE]     1
+# [UVMTOP]     1
+# [agent]     7
+# [base_test]     1
+# [environment]     8
+# [exhaustive_seq_test]     8
+# [router_tb]     7
+# [sequencer]     9
+# [sequences]    11
+# [yapp_tx_driver]     2
+# [yapp_tx_monitor]    57
+# ** Note: $finish    : /usr/local/questasim/linux_x86_64/../verilog_src/uvm-1.1d/src/base/uvm_root.svh(430)
+#    Time: 6230 ns  Iteration: 70  Instance: /top
+# 1
+# Break in Task uvm_pkg/uvm_root::run_test at /usr/local/questasim/linux_x86_64/../verilog_src/uvm-1.1d/src/base/uvm_root.svh line 430
+# Causality operation skipped due to absence of debug database file
+# Compile of top.sv was successful with warnings.
+# Compile of yapp_router.sv was successful.
+# Compile of yapp_if.sv was successful.
+# 3 compiles, 0 failed with no errors.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Note: (vsim-8009) Loading existing optimized design _opt
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=12.
+# Loading mtiUvm.uvm_pkg(fast)
+# Loading work.top_sv_unit(fast)
+# Loading mtiUvm.questa_uvm_pkg(fast)
+# Loading work.top(fast)
+# Loading work.yapp_if(fast__2)
+# Loading work.yapp_router(fast)
+# Loading work.host_ctl(fast)
+# Loading work.port_fsm(fast)
+# Loading work.fifo(fast)
+# Loading work.yapp_if(fast)
+# ** Warning: (vsim-3015) [PCDPC] - Port size (1) does not match connection size (32) for port 'suspend_0'. The port definition is at: /home/sucharitha/Downloads/laptop/lab06/sv/yapp_router.sv(315).
+#    Time: 0 ns  Iteration: 0  Instance: /top/dut File: /home/sucharitha/Downloads/laptop/lab06/tb/top.sv Line: 13
+# ** Warning: (vsim-3015) [PCDPC] - Port size (1) does not match connection size (32) for port 'suspend_1'. The port definition is at: /home/sucharitha/Downloads/laptop/lab06/sv/yapp_router.sv(318).
+#    Time: 0 ns  Iteration: 0  Instance: /top/dut File: /home/sucharitha/Downloads/laptop/lab06/tb/top.sv Line: 13
+# ** Warning: (vsim-3015) [PCDPC] - Port size (1) does not match connection size (32) for port 'suspend_2'. The port definition is at: /home/sucharitha/Downloads/laptop/lab06/sv/yapp_router.sv(321).
+#    Time: 0 ns  Iteration: 0  Instance: /top/dut File: /home/sucharitha/Downloads/laptop/lab06/tb/top.sv Line: 13
+# Loading /usr/local/questasim/uvm-1.1d/linux_x86_64/uvm_dpi.so
+run -all
+# ----------------------------------------------------------------
+# UVM-1.1d
+# (C) 2007-2013 Mentor Graphics Corporation
+# (C) 2007-2013 Cadence Design Systems, Inc.
+# (C) 2006-2013 Synopsys, Inc.
+# (C) 2011-2013 Cypress Semiconductor Corp.
+# ----------------------------------------------------------------
+# 
+#   ***********       IMPORTANT RELEASE NOTES         ************
+# 
+#   You are using a version of the UVM library that has been compiled
+#   with `UVM_NO_DEPRECATED undefined.
+#   See http://www.eda.org/svdb/view.php?id=3313 for more details.
+# 
+#   You are using a version of the UVM library that has been compiled
+#   with `UVM_OBJECT_MUST_HAVE_CONSTRUCTOR undefined.
+#   See http://www.eda.org/svdb/view.php?id=3770 for more details.
+# 
+#       (Specify +UVM_NO_RELNOTES to turn off this notice)
+# 
+# UVM_INFO verilog_src/questa_uvm_pkg-1.2/src/questa_uvm_pkg.sv(277) @ 0: reporter [Questa UVM] QUESTA_UVM-1.2.3
+# UVM_INFO verilog_src/questa_uvm_pkg-1.2/src/questa_uvm_pkg.sv(278) @ 0: reporter [Questa UVM]  questa_uvm::init(+struct)
+# UVM_INFO @ 0: reporter [RNTST] Running test exhaustive_seq_test...
+# UVM_INFO /home/sucharitha/Downloads/laptop/lab06/tb/../sv/../tb/router_test_lib.sv(215) @ 0: uvm_test_top [exhaustive_seq_test] build_phase
+# UVM_INFO /home/sucharitha/Downloads/laptop/lab06/tb/../sv/yapp_tx_sequencer.sv(27) @ 0: uvm_test_top.router_inst.env.agent.sequencer [sequencer] build_phase
+# UVM_INFO /home/sucharitha/Downloads/laptop/lab06/tb/../sv/yapp_tx_sequencer.sv(32) @ 0: uvm_test_top.router_inst.env.agent.sequencer [sequencer] connect_phase
+# UVM_INFO /home/sucharitha/Downloads/laptop/lab06/tb/../sv/yapp_env.sv(33) @ 0: uvm_test_top.router_inst.env [environment] connect_phase
+# UVM_INFO /home/sucharitha/Downloads/laptop/lab06/tb/../sv/../tb/router_tb.sv(33) @ 0: uvm_test_top.router_inst [router_tb] connect phase
+# UVM_INFO /home/sucharitha/Downloads/laptop/lab06/tb/../sv/../tb/router_test_lib.sv(82) @ 0: uvm_test_top [base_test] connect_phase
+# UVM_INFO /home/sucharitha/Downloads/laptop/lab06/tb/../sv/../tb/router_test_lib.sv(220) @ 0: uvm_test_top [exhaustive_seq_test] connect_phase
+# UVM_INFO /home/sucharitha/Downloads/laptop/lab06/tb/../sv/yapp_tx_sequencer.sv(36) @ 0: uvm_test_top.router_inst.env.agent.sequencer [sequencer] end_of_elaboration_phase
+# UVM_INFO /home/sucharitha/Downloads/laptop/lab06/tb/../sv/yapp_tx_agent.sv(46) @ 0: uvm_test_top.router_inst.env.agent [agent] end_of_elaboration_phase
+# UVM_INFO /home/sucharitha/Downloads/laptop/lab06/tb/../sv/yapp_env.sv(37) @ 0: uvm_test_top.router_inst.env [environment] end_of_elaboration_phase
+# UVM_INFO @ 0: reporter [UVMTOP] UVM testbench topology:
+# ----------------------------------------------------------------
+# Name                         Type                    Size  Value
+# ----------------------------------------------------------------
+# uvm_test_top                 exhaustive_seq_test     -     @478 
+#   router_inst                router_tb               -     @485 
+#     env                      yapp_env                -     @540 
+#       agent                  yapp_tx_agent           -     @547 
+#         driver               yapp_tx_driver          -     @562 
+#           rsp_port           uvm_analysis_port       -     @577 
+#           seq_item_port      uvm_seq_item_pull_port  -     @569 
+#         monitor              yapp_tx_monitor         -     @555 
+#         sequencer            yapp_tx_sequencer       -     @585 
+#           rsp_export         uvm_analysis_export     -     @592 
+#           seq_item_export    uvm_seq_item_pull_imp   -     @686 
+#           arbitration_queue  array                   0     -    
+#           lock_queue         array                   0     -    
+#           num_last_reqs      integral                32    'd1  
+#           num_last_rsps      integral                32    'd1  
+# ----------------------------------------------------------------
+# 
+# ------------------------------------------------------------------------
+# Name                  Type                   Size  Value                
+# ------------------------------------------------------------------------
+# sequence_lib          yapp_seq_lib           -     @496                 
+#   min_random_count    int unsigned           32    'd1                  
+#   max_random_count    int unsigned           32    'd7                  
+#   selection_mode      uvm_sequence_lib_mode  32    UVM_SEQ_LIB_RANDC    
+#   sequence_count      int unsigned           32    'd5                  
+#   typewide_sequences  queue_object_types     0     -                    
+#   sequences           queue_object_types     7     -                    
+#     [0]               uvm_object_wrapper     45    yapp_012_seq         
+#     [1]               uvm_object_wrapper     45    yapp_1_seq           
+#     [2]               uvm_object_wrapper     45    yapp_111_seq         
+#     [3]               uvm_object_wrapper     45    yapp_repeat_addr_seq 
+#     [4]               uvm_object_wrapper     45    yapp_incr_payload_seq
+#     [5]               uvm_object_wrapper     45    yapp_rnd_seq         
+#     [6]               uvm_object_wrapper     45    six_yapp_seq         
+#   seqs_distrib        as_int_string          0     -                    
+# ------------------------------------------------------------------------
+# UVM_INFO /home/sucharitha/Downloads/laptop/lab06/tb/../sv/yapp_tx_sequencer.sv(40) @ 0: uvm_test_top.router_inst.env.agent.sequencer [sequencer] start_of_simulation_phase
+# UVM_INFO /home/sucharitha/Downloads/laptop/lab06/tb/../sv/yapp_tx_agent.sv(50) @ 0: uvm_test_top.router_inst.env.agent [agent] start_of_simulation_phase
+# UVM_INFO /home/sucharitha/Downloads/laptop/lab06/tb/../sv/yapp_env.sv(41) @ 0: uvm_test_top.router_inst.env [environment] start_of_simulation_phase
+# UVM_INFO /home/sucharitha/Downloads/laptop/lab06/tb/../sv/../tb/router_tb.sv(41) @ 0: uvm_test_top.router_inst [router_tb] start_of_simulation_phase
+# UVM_INFO /home/sucharitha/Downloads/laptop/lab06/tb/../sv/../tb/router_test_lib.sv(228) @ 0: uvm_test_top [exhaustive_seq_test] start_of_simulation_phase
+# UVM_INFO /home/sucharitha/Downloads/laptop/lab06/tb/../sv/../tb/router_test_lib.sv(232) @ 0: uvm_test_top [exhaustive_seq_test] run_phase
+# UVM_INFO /home/sucharitha/Downloads/laptop/lab06/tb/../sv/../tb/router_tb.sv(45) @ 0: uvm_test_top.router_inst [router_tb] run_phase
+# UVM_INFO /home/sucharitha/Downloads/laptop/lab06/tb/../sv/yapp_env.sv(45) @ 0: uvm_test_top.router_inst.env [environment] run_phase
+# UVM_INFO /home/sucharitha/Downloads/laptop/lab06/tb/../sv/yapp_tx_agent.sv(54) @ 0: uvm_test_top.router_inst.env.agent [agent] run_phase
+# UVM_INFO /home/sucharitha/Downloads/laptop/lab06/tb/../sv/yapp_tx_sequencer.sv(44) @ 0: uvm_test_top.router_inst.env.agent.sequencer [sequencer] run_phase
+# UVM_INFO /home/sucharitha/Downloads/laptop/lab06/tb/../sv/yapp_tx_monitor.sv(67) @ 0: uvm_test_top.router_inst.env.agent.monitor [yapp_tx_monitor] yapp_tx_monitor class
+# UVM_INFO verilog_src/uvm-1.1d/src/seq/uvm_sequence_library.svh(660) @ 0: uvm_test_top.router_inst.env.agent.sequencer@@sequence_lib [SEQLIB/START] Starting sequence library yapp_seq_lib in run phase: 7 iterations in mode UVM_SEQ_LIB_RANDC
+# UVM_INFO /home/sucharitha/Downloads/laptop/lab06/tb/../sv/yapp_tx_seqs.sv(119) @ 0: uvm_test_top.router_inst.env.agent.sequencer@@sequence_lib.yapp_012_seq:1 [sequences] yapp_012_seq
+# UVM_INFO /home/sucharitha/Downloads/laptop/lab06/tb/../sv/yapp_tx_driver.sv(44) @ 20: uvm_test_top.router_inst.env.agent.driver [yapp_tx_driver] Reset dropped
+# UVM_INFO /home/sucharitha/Downloads/laptop/lab06/tb/../sv/yapp_tx_monitor.sv(60) @ 185: uvm_test_top.router_inst.env.agent.monitor [yapp_tx_monitor] Packet Collected :
+# ------------------------------------------------------
+# Name              Type               Size  Value      
+# ------------------------------------------------------
+# packet_collected  short_yapp_packet  -     @695       
+#   address         integral           2     'h0        
+#   length          integral           6     'h5        
+#   payload         da(integral)       5     -          
+#     [0]           integral           8     'h16       
+#     [1]           integral           8     'h89       
+#     [2]           integral           8     'h34       
+#     [3]           integral           8     'h2e       
+#     [4]           integral           8     'h37       
+#   parity          integral           8     'hb6       
+#   packet_delay    integral           32    'h0        
+#   parity_type     parity_t           32    GOOD_PARITY
+#   begin_time      time               64    125        
+#   end_time        time               64    185        
+# ------------------------------------------------------
+# 
+# UVM_INFO /home/sucharitha/Downloads/laptop/lab06/tb/../sv/yapp_tx_monitor.sv(62) @ 185: uvm_test_top.router_inst.env.agent.monitor [yapp_tx_monitor] count in monitor num_pkt_col=          1 
+# *** ROUTER (DUT) Parity Error Identified: Expected:96 Computed:a6 ***
+# UVM_INFO /home/sucharitha/Downloads/laptop/lab06/tb/../sv/yapp_tx_monitor.sv(60) @ 305: uvm_test_top.router_inst.env.agent.monitor [yapp_tx_monitor] Packet Collected :
+# ------------------------------------------------------
+# Name              Type               Size  Value      
+# ------------------------------------------------------
+# packet_collected  short_yapp_packet  -     @695       
+#   address         integral           2     'h1        
+#   length          integral           6     'h1        
+#   payload         da(integral)       1     -          
+#     [0]           integral           8     'hae       
+#   parity          integral           8     'haf       
+#   packet_delay    integral           32    'h0        
+#   parity_type     parity_t           32    GOOD_PARITY
+#   begin_time      time               64    285        
+#   end_time        time               64    305        
+# ------------------------------------------------------
+# 
+# UVM_INFO /home/sucharitha/Downloads/laptop/lab06/tb/../sv/yapp_tx_monitor.sv(62) @ 305: uvm_test_top.router_inst.env.agent.monitor [yapp_tx_monitor] count in monitor num_pkt_col=          2 
+# *** ROUTER (DUT) Parity Error Identified: Expected:af Computed:ab ***
+# UVM_INFO /home/sucharitha/Downloads/laptop/lab06/tb/../sv/yapp_tx_monitor.sv(60) @ 585: uvm_test_top.router_inst.env.agent.monitor [yapp_tx_monitor] Packet Collected :
+# ------------------------------------------------------
+# Name              Type               Size  Value      
+# ------------------------------------------------------
+# packet_collected  short_yapp_packet  -     @695       
+#   address         integral           2     'h2        
+#   length          integral           6     'hc        
+#   payload         da(integral)       12    -          
+#     [0]           integral           8     'h87       
+#     [1]           integral           8     'hae       
+#     [2]           integral           8     'hd0       
+#     [3]           integral           8     'h9d       
+#     [4]           integral           8     'h47       
+#     ...           ...                ...   ...        
+#     [7]           integral           8     'hc7       
+#     [8]           integral           8     'hd1       
+#     [9]           integral           8     'h54       
+#     [10]          integral           8     'h60       
+#     [11]          integral           8     'h5f       
+#   parity          integral           8     'h67       
+#   packet_delay    integral           32    'h0        
+#   parity_type     parity_t           32    GOOD_PARITY
+#   begin_time      time               64    455        
+#   end_time        time               64    585        
+# ------------------------------------------------------
+# 
+# UVM_INFO /home/sucharitha/Downloads/laptop/lab06/tb/../sv/yapp_tx_monitor.sv(62) @ 585: uvm_test_top.router_inst.env.agent.monitor [yapp_tx_monitor] count in monitor num_pkt_col=          3 
+# *** ROUTER (DUT) Parity Error Identified: Expected:e7 Computed:5a ***
+# UVM_INFO /home/sucharitha/Downloads/laptop/lab06/tb/../sv/yapp_tx_seqs.sv(181) @ 590: uvm_test_top.router_inst.env.agent.sequencer@@sequence_lib.six_yapp_seq:2 [sequences] six_yapp_seq
+# UVM_INFO /home/sucharitha/Downloads/laptop/lab06/tb/../sv/yapp_tx_seqs.sv(169) @ 590: uvm_test_top.router_inst.env.agent.sequencer@@sequence_lib.six_yapp_seq:2 [sequences] yapp_rnd_seq
+# UVM_INFO /home/sucharitha/Downloads/laptop/lab06/tb/../sv/yapp_tx_monitor.sv(60) @ 775: uvm_test_top.router_inst.env.agent.monitor [yapp_tx_monitor] Packet Collected :
+# ------------------------------------------------------
+# Name              Type               Size  Value      
+# ------------------------------------------------------
+# packet_collected  short_yapp_packet  -     @695       
+#   address         integral           2     'h1        
+#   length          integral           6     'h8        
+#   payload         da(integral)       8     -          
+#     [0]           integral           8     'h5b       
+#     [1]           integral           8     'hfa       
+#     [2]           integral           8     'he8       
+#     [3]           integral           8     'h56       
+#     [4]           integral           8     'hb        
+#     [5]           integral           8     'h7d       
+#     [6]           integral           8     'h83       
+#     [7]           integral           8     'hb2       
+#   parity          integral           8     'h50       
+#   packet_delay    integral           32    'h0        
+#   parity_type     parity_t           32    GOOD_PARITY
+#   begin_time      time               64    685        
+#   end_time        time               64    775        
+# ------------------------------------------------------
+# 
+# UVM_INFO /home/sucharitha/Downloads/laptop/lab06/tb/../sv/yapp_tx_monitor.sv(62) @ 775: uvm_test_top.router_inst.env.agent.monitor [yapp_tx_monitor] count in monitor num_pkt_col=          4 
+# *** ROUTER (DUT) Parity Error Identified: Expected:50 Computed:79 ***
+# UVM_INFO /home/sucharitha/Downloads/laptop/lab06/tb/../sv/yapp_tx_monitor.sv(60) @ 895: uvm_test_top.router_inst.env.agent.monitor [yapp_tx_monitor] Packet Collected :
+# ------------------------------------------------------
+# Name              Type               Size  Value      
+# ------------------------------------------------------
+# packet_collected  short_yapp_packet  -     @695       
+#   address         integral           2     'h0        
+#   length          integral           6     'h6        
+#   payload         da(integral)       6     -          
+#     [0]           integral           8     'ha7       
+#     [1]           integral           8     'h22       
+#     [2]           integral           8     'h1e       
+#     [3]           integral           8     'h51       
+#     [4]           integral           8     'hc2       
+#     [5]           integral           8     'hb2       
+#   parity          integral           8     'hbd       
+#   packet_delay    integral           32    'h0        
+#   parity_type     parity_t           32    GOOD_PARITY
+#   begin_time      time               64    825        
+#   end_time        time               64    895        
+# ------------------------------------------------------
+# 
+# UVM_INFO /home/sucharitha/Downloads/laptop/lab06/tb/../sv/yapp_tx_monitor.sv(62) @ 895: uvm_test_top.router_inst.env.agent.monitor [yapp_tx_monitor] count in monitor num_pkt_col=          5 
+# *** ROUTER (DUT) Parity Error Identified: Expected:bd Computed:a2 ***
+# UVM_INFO /home/sucharitha/Downloads/laptop/lab06/tb/../sv/yapp_tx_monitor.sv(60) @ 1195: uvm_test_top.router_inst.env.agent.monitor [yapp_tx_monitor] Packet Collected :
+# ------------------------------------------------------
+# Name              Type               Size  Value      
+# ------------------------------------------------------
+# packet_collected  short_yapp_packet  -     @695       
+#   address         integral           2     'h0        
+#   length          integral           6     'hb        
+#   payload         da(integral)       11    -          
+#     [0]           integral           8     'hf3       
+#     [1]           integral           8     'hb8       
+#     [2]           integral           8     'ha4       
+#     [3]           integral           8     'h8        
+#     [4]           integral           8     'h4e       
+#     ...           ...                ...   ...        
+#     [6]           integral           8     'hb6       
+#     [7]           integral           8     'h33       
+#     [8]           integral           8     'h3c       
+#     [9]           integral           8     'h76       
+#     [10]          integral           8     'h44       
+#   parity          integral           8     'h70       
+#   packet_delay    integral           32    'h0        
+#   parity_type     parity_t           32    GOOD_PARITY
+#   begin_time      time               64    1075       
+#   end_time        time               64    1195       
+# ------------------------------------------------------
+# 
+# UVM_INFO /home/sucharitha/Downloads/laptop/lab06/tb/../sv/yapp_tx_monitor.sv(62) @ 1195: uvm_test_top.router_inst.env.agent.monitor [yapp_tx_monitor] count in monitor num_pkt_col=          6 
+# *** ROUTER (DUT) Parity Error Identified: Expected:70 Computed:56 ***
+# UVM_INFO /home/sucharitha/Downloads/laptop/lab06/tb/../sv/yapp_tx_monitor.sv(60) @ 1375: uvm_test_top.router_inst.env.agent.monitor [yapp_tx_monitor] Packet Collected :
+# ------------------------------------------------------
+# Name              Type               Size  Value      
+# ------------------------------------------------------
+# packet_collected  short_yapp_packet  -     @695       
+#   address         integral           2     'h0        
+#   length          integral           6     'h4        
+#   payload         da(integral)       4     -          
+#     [0]           integral           8     'hc6       
+#     [1]           integral           8     'ha9       
+#     [2]           integral           8     'h72       
+#     [3]           integral           8     'hd4       
+#   parity          integral           8     'hcc       
+#   packet_delay    integral           32    'h0        
+#   parity_type     parity_t           32    GOOD_PARITY
+#   begin_time      time               64    1325       
+#   end_time        time               64    1375       
+# ------------------------------------------------------
+# 
+# UVM_INFO /home/sucharitha/Downloads/laptop/lab06/tb/../sv/yapp_tx_monitor.sv(62) @ 1375: uvm_test_top.router_inst.env.agent.monitor [yapp_tx_monitor] count in monitor num_pkt_col=          7 
+# *** ROUTER (DUT) Parity Error Identified: Expected:8c Computed:d9 ***
+# UVM_INFO /home/sucharitha/Downloads/laptop/lab06/tb/../sv/yapp_tx_monitor.sv(60) @ 1565: uvm_test_top.router_inst.env.agent.monitor [yapp_tx_monitor] Packet Collected :
+# ------------------------------------------------------
+# Name              Type               Size  Value      
+# ------------------------------------------------------
+# packet_collected  short_yapp_packet  -     @695       
+#   address         integral           2     'h0        
+#   length          integral           6     'h3        
+#   payload         da(integral)       3     -          
+#     [0]           integral           8     'h8e       
+#     [1]           integral           8     'h43       
+#     [2]           integral           8     'h39       
+#   parity          integral           8     'hf6       
+#   packet_delay    integral           32    'h0        
+#   parity_type     parity_t           32    GOOD_PARITY
+#   begin_time      time               64    1525       
+#   end_time        time               64    1565       
+# ------------------------------------------------------
+# 
+# UVM_INFO /home/sucharitha/Downloads/laptop/lab06/tb/../sv/yapp_tx_monitor.sv(62) @ 1565: uvm_test_top.router_inst.env.agent.monitor [yapp_tx_monitor] count in monitor num_pkt_col=          8 
+# *** ROUTER (DUT) Parity Error Identified: Expected:f6 Computed:f8 ***
+# UVM_INFO /home/sucharitha/Downloads/laptop/lab06/tb/../sv/yapp_tx_monitor.sv(60) @ 1765: uvm_test_top.router_inst.env.agent.monitor [yapp_tx_monitor] Packet Collected :
+# ------------------------------------------------------
+# Name              Type               Size  Value      
+# ------------------------------------------------------
+# packet_collected  short_yapp_packet  -     @695       
+#   address         integral           2     'h0        
+#   length          integral           6     'hb        
+#   payload         da(integral)       11    -          
+#     [0]           integral           8     'h47       
+#     [1]           integral           8     'hd6       
+#     [2]           integral           8     'hea       
+#     [3]           integral           8     'he4       
+#     [4]           integral           8     'hc7       
+#     ...           ...                ...   ...        
+#     [6]           integral           8     'hc        
+#     [7]           integral           8     'h37       
+#     [8]           integral           8     'h19       
+#     [9]           integral           8     'h3d       
+#     [10]          integral           8     'h19       
+#   parity          integral           8     'h10       
+#   packet_delay    integral           32    'h0        
+#   parity_type     parity_t           32    GOOD_PARITY
+#   begin_time      time               64    1645       
+#   end_time        time               64    1765       
+# ------------------------------------------------------
+# 
+# UVM_INFO /home/sucharitha/Downloads/laptop/lab06/tb/../sv/yapp_tx_monitor.sv(62) @ 1765: uvm_test_top.router_inst.env.agent.monitor [yapp_tx_monitor] count in monitor num_pkt_col=          9 
+# *** ROUTER (DUT) Parity Error Identified: Expected:10 Computed:36 ***
+# UVM_INFO /home/sucharitha/Downloads/laptop/lab06/tb/../sv/yapp_tx_seqs.sv(156) @ 1770: uvm_test_top.router_inst.env.agent.sequencer@@sequence_lib.yapp_incr_payload_seq:3 [sequences] yapp_incr_payload_seq
+# UVM_INFO /home/sucharitha/Downloads/laptop/lab06/tb/../sv/yapp_tx_monitor.sv(60) @ 2025: uvm_test_top.router_inst.env.agent.monitor [yapp_tx_monitor] Packet Collected :
+# ------------------------------------------------------
+# Name              Type               Size  Value      
+# ------------------------------------------------------
+# packet_collected  short_yapp_packet  -     @695       
+#   address         integral           2     'h0        
+#   length          integral           6     'hb        
+#   payload         da(integral)       11    -          
+#     [0]           integral           8     'h0        
+#     [1]           integral           8     'h16       
+#     [2]           integral           8     'h74       
+#     [3]           integral           8     'h56       
+#     [4]           integral           8     'he9       
+#     ...           ...                ...   ...        
+#     [6]           integral           8     'ha0       
+#     [7]           integral           8     'he9       
+#     [8]           integral           8     'hd3       
+#     [9]           integral           8     'h52       
+#     [10]          integral           8     'hb4       
+#   parity          integral           8     'h81       
+#   packet_delay    integral           32    'h0        
+#   parity_type     parity_t           32    GOOD_PARITY
+#   begin_time      time               64    1905       
+#   end_time        time               64    2025       
+# ------------------------------------------------------
+# 
+# UVM_INFO /home/sucharitha/Downloads/laptop/lab06/tb/../sv/yapp_tx_monitor.sv(62) @ 2025: uvm_test_top.router_inst.env.agent.monitor [yapp_tx_monitor] count in monitor num_pkt_col=         10 
+# *** ROUTER (DUT) Parity Error Identified: Expected:12 Computed:a7 ***
+# UVM_INFO /home/sucharitha/Downloads/laptop/lab06/tb/../sv/yapp_tx_monitor.sv(60) @ 2285: uvm_test_top.router_inst.env.agent.monitor [yapp_tx_monitor] Packet Collected :
+# ------------------------------------------------------
+# Name              Type               Size  Value      
+# ------------------------------------------------------
+# packet_collected  short_yapp_packet  -     @695       
+#   address         integral           2     'h0        
+#   length          integral           6     'hb        
+#   payload         da(integral)       11    -          
+#     [0]           integral           8     'h0        
+#     [1]           integral           8     'h1        
+#     [2]           integral           8     'h74       
+#     [3]           integral           8     'h56       
+#     [4]           integral           8     'he9       
+#     ...           ...                ...   ...        
+#     [6]           integral           8     'ha0       
+#     [7]           integral           8     'he9       
+#     [8]           integral           8     'hd3       
+#     [9]           integral           8     'h52       
+#     [10]          integral           8     'hb4       
+#   parity          integral           8     'h96       
+#   packet_delay    integral           32    'h0        
+#   parity_type     parity_t           32    GOOD_PARITY
+#   begin_time      time               64    2165       
+#   end_time        time               64    2285       
+# ------------------------------------------------------
+# 
+# UVM_INFO /home/sucharitha/Downloads/laptop/lab06/tb/../sv/yapp_tx_monitor.sv(62) @ 2285: uvm_test_top.router_inst.env.agent.monitor [yapp_tx_monitor] count in monitor num_pkt_col=         11 
+# *** ROUTER (DUT) Parity Error Identified: Expected:12 Computed:b0 ***
+# UVM_INFO /home/sucharitha/Downloads/laptop/lab06/tb/../sv/yapp_tx_monitor.sv(60) @ 2545: uvm_test_top.router_inst.env.agent.monitor [yapp_tx_monitor] Packet Collected :
+# ------------------------------------------------------
+# Name              Type               Size  Value      
+# ------------------------------------------------------
+# packet_collected  short_yapp_packet  -     @695       
+#   address         integral           2     'h0        
+#   length          integral           6     'hb        
+#   payload         da(integral)       11    -          
+#     [0]           integral           8     'h0        
+#     [1]           integral           8     'h1        
+#     [2]           integral           8     'h2        
+#     [3]           integral           8     'h56       
+#     [4]           integral           8     'he9       
+#     ...           ...                ...   ...        
+#     [6]           integral           8     'ha0       
+#     [7]           integral           8     'he9       
+#     [8]           integral           8     'hd3       
+#     [9]           integral           8     'h52       
+#     [10]          integral           8     'hb4       
+#   parity          integral           8     'he0       
+#   packet_delay    integral           32    'h0        
+#   parity_type     parity_t           32    GOOD_PARITY
+#   begin_time      time               64    2425       
+#   end_time        time               64    2545       
+# ------------------------------------------------------
+# 
+# UVM_INFO /home/sucharitha/Downloads/laptop/lab06/tb/../sv/yapp_tx_monitor.sv(62) @ 2545: uvm_test_top.router_inst.env.agent.monitor [yapp_tx_monitor] count in monitor num_pkt_col=         12 
+# *** ROUTER (DUT) Parity Error Identified: Expected:12 Computed:c6 ***
+# UVM_INFO /home/sucharitha/Downloads/laptop/lab06/tb/../sv/yapp_tx_monitor.sv(60) @ 2805: uvm_test_top.router_inst.env.agent.monitor [yapp_tx_monitor] Packet Collected :
+# ------------------------------------------------------
+# Name              Type               Size  Value      
+# ------------------------------------------------------
+# packet_collected  short_yapp_packet  -     @695       
+#   address         integral           2     'h0        
+#   length          integral           6     'hb        
+#   payload         da(integral)       11    -          
+#     [0]           integral           8     'h0        
+#     [1]           integral           8     'h1        
+#     [2]           integral           8     'h2        
+#     [3]           integral           8     'h3        
+#     [4]           integral           8     'he9       
+#     ...           ...                ...   ...        
+#     [6]           integral           8     'ha0       
+#     [7]           integral           8     'he9       
+#     [8]           integral           8     'hd3       
+#     [9]           integral           8     'h52       
+#     [10]          integral           8     'hb4       
+#   parity          integral           8     'hb5       
+#   packet_delay    integral           32    'h0        
+#   parity_type     parity_t           32    GOOD_PARITY
+#   begin_time      time               64    2685       
+#   end_time        time               64    2805       
+# ------------------------------------------------------
+# 
+# UVM_INFO /home/sucharitha/Downloads/laptop/lab06/tb/../sv/yapp_tx_monitor.sv(62) @ 2805: uvm_test_top.router_inst.env.agent.monitor [yapp_tx_monitor] count in monitor num_pkt_col=         13 
+# *** ROUTER (DUT) Parity Error Identified: Expected:12 Computed:93 ***
+# UVM_INFO /home/sucharitha/Downloads/laptop/lab06/tb/../sv/yapp_tx_monitor.sv(60) @ 3065: uvm_test_top.router_inst.env.agent.monitor [yapp_tx_monitor] Packet Collected :
+# ------------------------------------------------------
+# Name              Type               Size  Value      
+# ------------------------------------------------------
+# packet_collected  short_yapp_packet  -     @695       
+#   address         integral           2     'h0        
+#   length          integral           6     'hb        
+#   payload         da(integral)       11    -          
+#     [0]           integral           8     'h0        
+#     [1]           integral           8     'h1        
+#     [2]           integral           8     'h2        
+#     [3]           integral           8     'h3        
+#     [4]           integral           8     'h4        
+#     ...           ...                ...   ...        
+#     [6]           integral           8     'ha0       
+#     [7]           integral           8     'he9       
+#     [8]           integral           8     'hd3       
+#     [9]           integral           8     'h52       
+#     [10]          integral           8     'hb4       
+#   parity          integral           8     'h58       
+#   packet_delay    integral           32    'h0        
+#   parity_type     parity_t           32    GOOD_PARITY
+#   begin_time      time               64    2945       
+#   end_time        time               64    3065       
+# ------------------------------------------------------
+# 
+# UVM_INFO /home/sucharitha/Downloads/laptop/lab06/tb/../sv/yapp_tx_monitor.sv(62) @ 3065: uvm_test_top.router_inst.env.agent.monitor [yapp_tx_monitor] count in monitor num_pkt_col=         14 
+# *** ROUTER (DUT) Parity Error Identified: Expected:12 Computed:7e ***
+# UVM_INFO /home/sucharitha/Downloads/laptop/lab06/tb/../sv/yapp_tx_monitor.sv(60) @ 3325: uvm_test_top.router_inst.env.agent.monitor [yapp_tx_monitor] Packet Collected :
+# ------------------------------------------------------
+# Name              Type               Size  Value      
+# ------------------------------------------------------
+# packet_collected  short_yapp_packet  -     @695       
+#   address         integral           2     'h0        
+#   length          integral           6     'hb        
+#   payload         da(integral)       11    -          
+#     [0]           integral           8     'h0        
+#     [1]           integral           8     'h1        
+#     [2]           integral           8     'h2        
+#     [3]           integral           8     'h3        
+#     [4]           integral           8     'h4        
+#     ...           ...                ...   ...        
+#     [6]           integral           8     'ha0       
+#     [7]           integral           8     'he9       
+#     [8]           integral           8     'hd3       
+#     [9]           integral           8     'h52       
+#     [10]          integral           8     'hb4       
+#   parity          integral           8     'h77       
+#   packet_delay    integral           32    'h0        
+#   parity_type     parity_t           32    GOOD_PARITY
+#   begin_time      time               64    3205       
+#   end_time        time               64    3325       
+# ------------------------------------------------------
+# 
+# UVM_INFO /home/sucharitha/Downloads/laptop/lab06/tb/../sv/yapp_tx_monitor.sv(62) @ 3325: uvm_test_top.router_inst.env.agent.monitor [yapp_tx_monitor] count in monitor num_pkt_col=         15 
+# *** ROUTER (DUT) Parity Error Identified: Expected:12 Computed:51 ***
+# UVM_INFO /home/sucharitha/Downloads/laptop/lab06/tb/../sv/yapp_tx_monitor.sv(60) @ 3585: uvm_test_top.router_inst.env.agent.monitor [yapp_tx_monitor] Packet Collected :
+# ------------------------------------------------------
+# Name              Type               Size  Value      
+# ------------------------------------------------------
+# packet_collected  short_yapp_packet  -     @695       
+#   address         integral           2     'h0        
+#   length          integral           6     'hb        
+#   payload         da(integral)       11    -          
+#     [0]           integral           8     'h0        
+#     [1]           integral           8     'h1        
+#     [2]           integral           8     'h2        
+#     [3]           integral           8     'h3        
+#     [4]           integral           8     'h4        
+#     ...           ...                ...   ...        
+#     [6]           integral           8     'h6        
+#     [7]           integral           8     'he9       
+#     [8]           integral           8     'hd3       
+#     [9]           integral           8     'h52       
+#     [10]          integral           8     'hb4       
+#   parity          integral           8     'hd1       
+#   packet_delay    integral           32    'h0        
+#   parity_type     parity_t           32    GOOD_PARITY
+#   begin_time      time               64    3465       
+#   end_time        time               64    3585       
+# ------------------------------------------------------
+# 
+# UVM_INFO /home/sucharitha/Downloads/laptop/lab06/tb/../sv/yapp_tx_monitor.sv(62) @ 3585: uvm_test_top.router_inst.env.agent.monitor [yapp_tx_monitor] count in monitor num_pkt_col=         16 
+# *** ROUTER (DUT) Parity Error Identified: Expected:12 Computed:f7 ***
+# UVM_INFO /home/sucharitha/Downloads/laptop/lab06/tb/../sv/yapp_tx_monitor.sv(60) @ 3845: uvm_test_top.router_inst.env.agent.monitor [yapp_tx_monitor] Packet Collected :
+# ------------------------------------------------------
+# Name              Type               Size  Value      
+# ------------------------------------------------------
+# packet_collected  short_yapp_packet  -     @695       
+#   address         integral           2     'h0        
+#   length          integral           6     'hb        
+#   payload         da(integral)       11    -          
+#     [0]           integral           8     'h0        
+#     [1]           integral           8     'h1        
+#     [2]           integral           8     'h2        
+#     [3]           integral           8     'h3        
+#     [4]           integral           8     'h4        
+#     ...           ...                ...   ...        
+#     [6]           integral           8     'h6        
+#     [7]           integral           8     'h7        
+#     [8]           integral           8     'hd3       
+#     [9]           integral           8     'h52       
+#     [10]          integral           8     'hb4       
+#   parity          integral           8     'h3f       
+#   packet_delay    integral           32    'h0        
+#   parity_type     parity_t           32    GOOD_PARITY
+#   begin_time      time               64    3725       
+#   end_time        time               64    3845       
+# ------------------------------------------------------
+# 
+# UVM_INFO /home/sucharitha/Downloads/laptop/lab06/tb/../sv/yapp_tx_monitor.sv(62) @ 3845: uvm_test_top.router_inst.env.agent.monitor [yapp_tx_monitor] count in monitor num_pkt_col=         17 
+# *** ROUTER (DUT) Parity Error Identified: Expected:12 Computed:19 ***
+# UVM_INFO /home/sucharitha/Downloads/laptop/lab06/tb/../sv/yapp_tx_monitor.sv(60) @ 4105: uvm_test_top.router_inst.env.agent.monitor [yapp_tx_monitor] Packet Collected :
+# ------------------------------------------------------
+# Name              Type               Size  Value      
+# ------------------------------------------------------
+# packet_collected  short_yapp_packet  -     @695       
+#   address         integral           2     'h0        
+#   length          integral           6     'hb        
+#   payload         da(integral)       11    -          
+#     [0]           integral           8     'h0        
+#     [1]           integral           8     'h1        
+#     [2]           integral           8     'h2        
+#     [3]           integral           8     'h3        
+#     [4]           integral           8     'h4        
+#     ...           ...                ...   ...        
+#     [6]           integral           8     'h6        
+#     [7]           integral           8     'h7        
+#     [8]           integral           8     'h8        
+#     [9]           integral           8     'h52       
+#     [10]          integral           8     'hb4       
+#   parity          integral           8     'he4       
+#   packet_delay    integral           32    'h0        
+#   parity_type     parity_t           32    GOOD_PARITY
+#   begin_time      time               64    3985       
+#   end_time        time               64    4105       
+# ------------------------------------------------------
+# 
+# UVM_INFO /home/sucharitha/Downloads/laptop/lab06/tb/../sv/yapp_tx_monitor.sv(62) @ 4105: uvm_test_top.router_inst.env.agent.monitor [yapp_tx_monitor] count in monitor num_pkt_col=         18 
+# *** ROUTER (DUT) Parity Error Identified: Expected:12 Computed:c2 ***
+# UVM_INFO /home/sucharitha/Downloads/laptop/lab06/tb/../sv/yapp_tx_monitor.sv(60) @ 4365: uvm_test_top.router_inst.env.agent.monitor [yapp_tx_monitor] Packet Collected :
+# ------------------------------------------------------
+# Name              Type               Size  Value      
+# ------------------------------------------------------
+# packet_collected  short_yapp_packet  -     @695       
+#   address         integral           2     'h0        
+#   length          integral           6     'hb        
+#   payload         da(integral)       11    -          
+#     [0]           integral           8     'h0        
+#     [1]           integral           8     'h1        
+#     [2]           integral           8     'h2        
+#     [3]           integral           8     'h3        
+#     [4]           integral           8     'h4        
+#     ...           ...                ...   ...        
+#     [6]           integral           8     'h6        
+#     [7]           integral           8     'h7        
+#     [8]           integral           8     'h8        
+#     [9]           integral           8     'h9        
+#     [10]          integral           8     'hb4       
+#   parity          integral           8     'hbf       
+#   packet_delay    integral           32    'h0        
+#   parity_type     parity_t           32    GOOD_PARITY
+#   begin_time      time               64    4245       
+#   end_time        time               64    4365       
+# ------------------------------------------------------
+# 
+# UVM_INFO /home/sucharitha/Downloads/laptop/lab06/tb/../sv/yapp_tx_monitor.sv(62) @ 4365: uvm_test_top.router_inst.env.agent.monitor [yapp_tx_monitor] count in monitor num_pkt_col=         19 
+# *** ROUTER (DUT) Parity Error Identified: Expected:12 Computed:99 ***
+# UVM_INFO /home/sucharitha/Downloads/laptop/lab06/tb/../sv/yapp_tx_monitor.sv(60) @ 4625: uvm_test_top.router_inst.env.agent.monitor [yapp_tx_monitor] Packet Collected :
+# ------------------------------------------------------
+# Name              Type               Size  Value      
+# ------------------------------------------------------
+# packet_collected  short_yapp_packet  -     @695       
+#   address         integral           2     'h0        
+#   length          integral           6     'hb        
+#   payload         da(integral)       11    -          
+#     [0]           integral           8     'h0        
+#     [1]           integral           8     'h1        
+#     [2]           integral           8     'h2        
+#     [3]           integral           8     'h3        
+#     [4]           integral           8     'h4        
+#     ...           ...                ...   ...        
+#     [6]           integral           8     'h6        
+#     [7]           integral           8     'h7        
+#     [8]           integral           8     'h8        
+#     [9]           integral           8     'h9        
+#     [10]          integral           8     'ha        
+#   parity          integral           8     'h1        
+#   packet_delay    integral           32    'h0        
+#   parity_type     parity_t           32    GOOD_PARITY
+#   begin_time      time               64    4505       
+#   end_time        time               64    4625       
+# ------------------------------------------------------
+# 
+# UVM_INFO /home/sucharitha/Downloads/laptop/lab06/tb/../sv/yapp_tx_monitor.sv(62) @ 4625: uvm_test_top.router_inst.env.agent.monitor [yapp_tx_monitor] count in monitor num_pkt_col=         20 
+# *** ROUTER (DUT) Parity Error Identified: Expected:12 Computed:27 ***
+# UVM_INFO /home/sucharitha/Downloads/laptop/lab06/tb/../sv/yapp_tx_seqs.sv(146) @ 4630: uvm_test_top.router_inst.env.agent.sequencer@@sequence_lib.yapp_repeat_addr_seq:4 [sequences] yapp_repeat_addr_seq
+# UVM_INFO /home/sucharitha/Downloads/laptop/lab06/tb/../sv/yapp_tx_monitor.sv(60) @ 4945: uvm_test_top.router_inst.env.agent.monitor [yapp_tx_monitor] Packet Collected :
+# ------------------------------------------------------
+# Name              Type               Size  Value      
+# ------------------------------------------------------
+# packet_collected  short_yapp_packet  -     @695       
+#   address         integral           2     'h1        
+#   length          integral           6     'hd        
+#   payload         da(integral)       13    -          
+#     [0]           integral           8     'hf4       
+#     [1]           integral           8     'h86       
+#     [2]           integral           8     'h91       
+#     [3]           integral           8     'he5       
+#     [4]           integral           8     'h47       
+#     ...           ...                ...   ...        
+#     [8]           integral           8     'hdf       
+#     [9]           integral           8     'h7f       
+#     [10]          integral           8     'hb6       
+#     [11]          integral           8     'hdb       
+#     [12]          integral           8     'h9e       
+#   parity          integral           8     'h82       
+#   packet_delay    integral           32    'h0        
+#   parity_type     parity_t           32    GOOD_PARITY
+#   begin_time      time               64    4805       
+#   end_time        time               64    4945       
+# ------------------------------------------------------
+# 
+# UVM_INFO /home/sucharitha/Downloads/laptop/lab06/tb/../sv/yapp_tx_monitor.sv(62) @ 4945: uvm_test_top.router_inst.env.agent.monitor [yapp_tx_monitor] count in monitor num_pkt_col=         21 
+# *** ROUTER (DUT) Parity Error Identified: Expected:82 Computed:ba ***
+# UVM_INFO /home/sucharitha/Downloads/laptop/lab06/tb/../sv/yapp_tx_monitor.sv(60) @ 5055: uvm_test_top.router_inst.env.agent.monitor [yapp_tx_monitor] Packet Collected :
+# ------------------------------------------------------
+# Name              Type               Size  Value      
+# ------------------------------------------------------
+# packet_collected  short_yapp_packet  -     @695       
+#   address         integral           2     'h1        
+#   length          integral           6     'h8        
+#   payload         da(integral)       8     -          
+#     [0]           integral           8     'h1b       
+#     [1]           integral           8     'he8       
+#     [2]           integral           8     'h7a       
+#     [3]           integral           8     'h52       
+#     [4]           integral           8     'he        
+#     [5]           integral           8     'h62       
+#     [6]           integral           8     'h78       
+#     [7]           integral           8     'h1f       
+#   parity          integral           8     'hd8       
+#   packet_delay    integral           32    'h0        
+#   parity_type     parity_t           32    GOOD_PARITY
+#   begin_time      time               64    4965       
+#   end_time        time               64    5055       
+# ------------------------------------------------------
+# 
+# UVM_INFO /home/sucharitha/Downloads/laptop/lab06/tb/../sv/yapp_tx_monitor.sv(62) @ 5055: uvm_test_top.router_inst.env.agent.monitor [yapp_tx_monitor] count in monitor num_pkt_col=         22 
+# *** ROUTER (DUT) Parity Error Identified: Expected:d8 Computed:f1 ***
+# UVM_INFO /home/sucharitha/Downloads/laptop/lab06/tb/../sv/yapp_tx_seqs.sv(136) @ 5060: uvm_test_top.router_inst.env.agent.sequencer@@sequence_lib.yapp_111_seq:5 [sequences] yapp_111_seq
+# UVM_INFO /home/sucharitha/Downloads/laptop/lab06/tb/../sv/yapp_tx_seqs.sv(128) @ 5060: uvm_test_top.router_inst.env.agent.sequencer@@sequence_lib.yapp_111_seq:5 [sequences] yapp_1_seq
+# UVM_INFO /home/sucharitha/Downloads/laptop/lab06/tb/../sv/yapp_tx_monitor.sv(60) @ 5365: uvm_test_top.router_inst.env.agent.monitor [yapp_tx_monitor] Packet Collected :
+# ------------------------------------------------------
+# Name              Type               Size  Value      
+# ------------------------------------------------------
+# packet_collected  short_yapp_packet  -     @695       
+#   address         integral           2     'h1        
+#   length          integral           6     'hc        
+#   payload         da(integral)       12    -          
+#     [0]           integral           8     'h82       
+#     [1]           integral           8     'h87       
+#     [2]           integral           8     'h5c       
+#     [3]           integral           8     'hc7       
+#     [4]           integral           8     'he9       
+#     ...           ...                ...   ...        
+#     [7]           integral           8     'h89       
+#     [8]           integral           8     'haf       
+#     [9]           integral           8     'h6b       
+#     [10]          integral           8     'h85       
+#     [11]          integral           8     'hd4       
+#   parity          integral           8     'h51       
+#   packet_delay    integral           32    'h0        
+#   parity_type     parity_t           32    GOOD_PARITY
+#   begin_time      time               64    5235       
+#   end_time        time               64    5365       
+# ------------------------------------------------------
+# 
+# UVM_INFO /home/sucharitha/Downloads/laptop/lab06/tb/../sv/yapp_tx_monitor.sv(62) @ 5365: uvm_test_top.router_inst.env.agent.monitor [yapp_tx_monitor] count in monitor num_pkt_col=         23 
+# *** ROUTER (DUT) Parity Error Identified: Expected:51 Computed:6c ***
+# UVM_INFO /home/sucharitha/Downloads/laptop/lab06/tb/../sv/yapp_tx_seqs.sv(128) @ 5370: uvm_test_top.router_inst.env.agent.sequencer@@sequence_lib.yapp_111_seq:5 [sequences] yapp_1_seq
+# UVM_INFO /home/sucharitha/Downloads/laptop/lab06/tb/../sv/yapp_tx_monitor.sv(60) @ 5685: uvm_test_top.router_inst.env.agent.monitor [yapp_tx_monitor] Packet Collected :
+# ------------------------------------------------------
+# Name              Type               Size  Value      
+# ------------------------------------------------------
+# packet_collected  short_yapp_packet  -     @695       
+#   address         integral           2     'h1        
+#   length          integral           6     'hb        
+#   payload         da(integral)       11    -          
+#     [0]           integral           8     'h5e       
+#     [1]           integral           8     'he4       
+#     [2]           integral           8     'h9d       
+#     [3]           integral           8     'hf2       
+#     [4]           integral           8     'hd6       
+#     ...           ...                ...   ...        
+#     [6]           integral           8     'hf7       
+#     [7]           integral           8     'hd2       
+#     [8]           integral           8     'h35       
+#     [9]           integral           8     'h21       
+#     [10]          integral           8     'h2f       
+#   parity          integral           8     'h82       
+#   packet_delay    integral           32    'h0        
+#   parity_type     parity_t           32    GOOD_PARITY
+#   begin_time      time               64    5565       
+#   end_time        time               64    5685       
+# ------------------------------------------------------
+# 
+# UVM_INFO /home/sucharitha/Downloads/laptop/lab06/tb/../sv/yapp_tx_monitor.sv(62) @ 5685: uvm_test_top.router_inst.env.agent.monitor [yapp_tx_monitor] count in monitor num_pkt_col=         24 
+# *** ROUTER (DUT) Parity Error Identified: Expected:82 Computed:a4 ***
+# UVM_INFO /home/sucharitha/Downloads/laptop/lab06/tb/../sv/yapp_tx_seqs.sv(128) @ 5690: uvm_test_top.router_inst.env.agent.sequencer@@sequence_lib.yapp_111_seq:5 [sequences] yapp_1_seq
+# UVM_INFO /home/sucharitha/Downloads/laptop/lab06/tb/../sv/yapp_tx_monitor.sv(60) @ 5785: uvm_test_top.router_inst.env.agent.monitor [yapp_tx_monitor] Packet Collected :
+# ------------------------------------------------------
+# Name              Type               Size  Value      
+# ------------------------------------------------------
+# packet_collected  short_yapp_packet  -     @695       
+#   address         integral           2     'h1        
+#   length          integral           6     'h7        
+#   payload         da(integral)       7     -          
+#     [0]           integral           8     'he2       
+#     [1]           integral           8     'hf        
+#     [2]           integral           8     'h9f       
+#     [3]           integral           8     'ha2       
+#     [4]           integral           8     'hfe       
+#     [5]           integral           8     'h5f       
+#     [6]           integral           8     'hed       
+#   parity          integral           8     'h9b       
+#   packet_delay    integral           32    'h0        
+#   parity_type     parity_t           32    GOOD_PARITY
+#   begin_time      time               64    5705       
+#   end_time        time               64    5785       
+# ------------------------------------------------------
+# 
+# UVM_INFO /home/sucharitha/Downloads/laptop/lab06/tb/../sv/yapp_tx_monitor.sv(62) @ 5785: uvm_test_top.router_inst.env.agent.monitor [yapp_tx_monitor] count in monitor num_pkt_col=         25 
+# *** ROUTER (DUT) Parity Error Identified: Expected:9b Computed:81 ***
+# UVM_INFO /home/sucharitha/Downloads/laptop/lab06/tb/../sv/yapp_tx_seqs.sv(169) @ 5790: uvm_test_top.router_inst.env.agent.sequencer@@sequence_lib.yapp_rnd_seq:6 [sequences] yapp_rnd_seq
+# UVM_INFO /home/sucharitha/Downloads/laptop/lab06/tb/../sv/yapp_tx_monitor.sv(60) @ 5895: uvm_test_top.router_inst.env.agent.monitor [yapp_tx_monitor] Packet Collected :
+# ------------------------------------------------------
+# Name              Type               Size  Value      
+# ------------------------------------------------------
+# packet_collected  short_yapp_packet  -     @695       
+#   address         integral           2     'h0        
+#   length          integral           6     'h2        
+#   payload         da(integral)       2     -          
+#     [0]           integral           8     'hc6       
+#     [1]           integral           8     'h15       
+#   parity          integral           8     'hd0       
+#   packet_delay    integral           32    'h0        
+#   parity_type     parity_t           32    GOOD_PARITY
+#   begin_time      time               64    5865       
+#   end_time        time               64    5895       
+# ------------------------------------------------------
+# 
+# UVM_INFO /home/sucharitha/Downloads/laptop/lab06/tb/../sv/yapp_tx_monitor.sv(62) @ 5895: uvm_test_top.router_inst.env.agent.monitor [yapp_tx_monitor] count in monitor num_pkt_col=         26 
+# *** ROUTER (DUT) Parity Error Identified: Expected:d0 Computed:db ***
+# UVM_INFO /home/sucharitha/Downloads/laptop/lab06/tb/../sv/yapp_tx_monitor.sv(60) @ 6035: uvm_test_top.router_inst.env.agent.monitor [yapp_tx_monitor] Packet Collected :
+# ------------------------------------------------------
+# Name              Type               Size  Value      
+# ------------------------------------------------------
+# packet_collected  short_yapp_packet  -     @695       
+#   address         integral           2     'h0        
+#   length          integral           6     'h5        
+#   payload         da(integral)       5     -          
+#     [0]           integral           8     'h3d       
+#     [1]           integral           8     'h4f       
+#     [2]           integral           8     'h59       
+#     [3]           integral           8     'hfd       
+#     [4]           integral           8     'h8c       
+#   parity          integral           8     'h5e       
+#   packet_delay    integral           32    'h0        
+#   parity_type     parity_t           32    GOOD_PARITY
+#   begin_time      time               64    5975       
+#   end_time        time               64    6035       
+# ------------------------------------------------------
+# 
+# UVM_INFO /home/sucharitha/Downloads/laptop/lab06/tb/../sv/yapp_tx_monitor.sv(62) @ 6035: uvm_test_top.router_inst.env.agent.monitor [yapp_tx_monitor] count in monitor num_pkt_col=         27 
+# *** ROUTER (DUT) Parity Error Identified: Expected:5e Computed:4e ***
+# UVM_INFO /home/sucharitha/Downloads/laptop/lab06/tb/../sv/yapp_tx_seqs.sv(128) @ 6040: uvm_test_top.router_inst.env.agent.sequencer@@sequence_lib.yapp_1_seq:7 [sequences] yapp_1_seq
+# UVM_INFO /home/sucharitha/Downloads/laptop/lab06/tb/../sv/yapp_tx_monitor.sv(60) @ 6225: uvm_test_top.router_inst.env.agent.monitor [yapp_tx_monitor] Packet Collected :
+# ------------------------------------------------------
+# Name              Type               Size  Value      
+# ------------------------------------------------------
+# packet_collected  short_yapp_packet  -     @695       
+#   address         integral           2     'h1        
+#   length          integral           6     'h1        
+#   payload         da(integral)       1     -          
+#     [0]           integral           8     'h5f       
+#   parity          integral           8     'h5e       
+#   packet_delay    integral           32    'h0        
+#   parity_type     parity_t           32    GOOD_PARITY
+#   begin_time      time               64    6205       
+#   end_time        time               64    6225       
+# ------------------------------------------------------
+# 
+# UVM_INFO /home/sucharitha/Downloads/laptop/lab06/tb/../sv/yapp_tx_monitor.sv(62) @ 6225: uvm_test_top.router_inst.env.agent.monitor [yapp_tx_monitor] count in monitor num_pkt_col=         28 
+# *** ROUTER (DUT) Parity Error Identified: Expected:5e Computed:5a ***
+# UVM_INFO verilog_src/uvm-1.1d/src/seq/uvm_sequence_library.svh(737) @ 6230: uvm_test_top.router_inst.env.agent.sequencer@@sequence_lib [SEQLIB/END] Ending sequence library in phase run
+# UVM_INFO verilog_src/uvm-1.1d/src/base/uvm_objection.svh(1267) @ 6230: reporter [TEST_DONE] 'run' phase is ready to proceed to the 'extract' phase
+# UVM_INFO /home/sucharitha/Downloads/laptop/lab06/tb/../sv/yapp_tx_sequencer.sv(48) @ 6230: uvm_test_top.router_inst.env.agent.sequencer [sequencer] extract_phase
+# UVM_INFO /home/sucharitha/Downloads/laptop/lab06/tb/../sv/yapp_tx_agent.sv(58) @ 6230: uvm_test_top.router_inst.env.agent [agent] extract_phase
+# UVM_INFO /home/sucharitha/Downloads/laptop/lab06/tb/../sv/yapp_env.sv(49) @ 6230: uvm_test_top.router_inst.env [environment] extract_phase
+# UVM_INFO /home/sucharitha/Downloads/laptop/lab06/tb/../sv/../tb/router_tb.sv(49) @ 6230: uvm_test_top.router_inst [router_tb] extract_phase
+# UVM_INFO /home/sucharitha/Downloads/laptop/lab06/tb/../sv/../tb/router_test_lib.sv(236) @ 6230: uvm_test_top [exhaustive_seq_test] extract_phase
+# UVM_INFO /home/sucharitha/Downloads/laptop/lab06/tb/../sv/yapp_tx_sequencer.sv(52) @ 6230: uvm_test_top.router_inst.env.agent.sequencer [sequencer] check_phase
+# UVM_INFO /home/sucharitha/Downloads/laptop/lab06/tb/../sv/yapp_tx_agent.sv(62) @ 6230: uvm_test_top.router_inst.env.agent [agent] check_phase
+# UVM_INFO /home/sucharitha/Downloads/laptop/lab06/tb/../sv/yapp_env.sv(53) @ 6230: uvm_test_top.router_inst.env [environment] check_phase
+# UVM_INFO /home/sucharitha/Downloads/laptop/lab06/tb/../sv/../tb/router_tb.sv(53) @ 6230: uvm_test_top.router_inst [router_tb] check_phase
+# UVM_INFO /home/sucharitha/Downloads/laptop/lab06/tb/../sv/../tb/router_test_lib.sv(240) @ 6230: uvm_test_top [exhaustive_seq_test] check_phase
+# UVM_INFO /home/sucharitha/Downloads/laptop/lab06/tb/../sv/yapp_tx_driver.sv(93) @ 6230: uvm_test_top.router_inst.env.agent.driver [yapp_tx_driver] Report: YAPP TX driver sent 28 packets
+# UVM_INFO /home/sucharitha/Downloads/laptop/lab06/tb/../sv/yapp_tx_sequencer.sv(56) @ 6230: uvm_test_top.router_inst.env.agent.sequencer [sequencer] report_phase
+# UVM_INFO /home/sucharitha/Downloads/laptop/lab06/tb/../sv/yapp_tx_agent.sv(66) @ 6230: uvm_test_top.router_inst.env.agent [agent] report_phase
+# UVM_INFO /home/sucharitha/Downloads/laptop/lab06/tb/../sv/yapp_env.sv(57) @ 6230: uvm_test_top.router_inst.env [environment] report_phase
+# UVM_INFO /home/sucharitha/Downloads/laptop/lab06/tb/../sv/../tb/router_tb.sv(57) @ 6230: uvm_test_top.router_inst [router_tb] report_phase
+# UVM_INFO /home/sucharitha/Downloads/laptop/lab06/tb/../sv/../tb/router_test_lib.sv(244) @ 6230: uvm_test_top [exhaustive_seq_test] report_phase
+# UVM_INFO /home/sucharitha/Downloads/laptop/lab06/tb/../sv/../tb/router_test_lib.sv(248) @ 6230: uvm_test_top [exhaustive_seq_test] final_phase
+# UVM_INFO /home/sucharitha/Downloads/laptop/lab06/tb/../sv/../tb/router_tb.sv(61) @ 6230: uvm_test_top.router_inst [router_tb] final_phase
+# UVM_INFO /home/sucharitha/Downloads/laptop/lab06/tb/../sv/yapp_env.sv(61) @ 6230: uvm_test_top.router_inst.env [environment] final_phase
+# UVM_INFO /home/sucharitha/Downloads/laptop/lab06/tb/../sv/yapp_tx_agent.sv(70) @ 6230: uvm_test_top.router_inst.env.agent [agent] final_phase
+# UVM_INFO /home/sucharitha/Downloads/laptop/lab06/tb/../sv/yapp_tx_sequencer.sv(60) @ 6230: uvm_test_top.router_inst.env.agent.sequencer [sequencer] final_phase
+# 
+# --- UVM Report Summary ---
+# 
+# ** Report counts by severity
+# UVM_INFO :  117
+# UVM_WARNING :    0
+# UVM_ERROR :    0
+# UVM_FATAL :    0
+# ** Report counts by id
+# [Questa UVM]     2
+# [RNTST]     1
+# [SEQLIB/END]     1
+# [SEQLIB/START]     1
+# [TEST_DONE]     1
+# [UVMTOP]     1
+# [agent]     7
+# [base_test]     1
+# [environment]     8
+# [exhaustive_seq_test]     8
+# [router_tb]     7
+# [sequencer]     9
+# [sequences]    11
+# [yapp_tx_driver]     2
+# [yapp_tx_monitor]    57
+# ** Note: $finish    : /usr/local/questasim/linux_x86_64/../verilog_src/uvm-1.1d/src/base/uvm_root.svh(430)
+#    Time: 6230 ns  Iteration: 70  Instance: /top
+# 1
+# Break in Task uvm_pkg/uvm_root::run_test at /usr/local/questasim/linux_x86_64/../verilog_src/uvm-1.1d/src/base/uvm_root.svh line 430
+# A time value could not be extracted from the current line
+quit -sim
+# End time: 19:10:28 on Jul 15,2024, Elapsed time: 0:19:05
+# Errors: 0, Warnings: 16

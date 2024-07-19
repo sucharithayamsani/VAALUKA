@@ -1,0 +1,141 @@
+`ifndef YAPP_TX_SEQUENCER
+`define YAPP_TX_SEQUENCER
+
+class yapp_tx_seqs extends uvm_sequence #(yapp_packet);
+`uvm_object_utils(yapp_tx_seqs)
+
+  extern function new(string name = "yapp_tx_seqs");
+  extern virtual task body();
+
+endclass
+//sequence 012
+class yapp_012_seq extends yapp_tx_seqs;
+`uvm_object_utils(yapp_012_seq)
+
+  extern function new(string name = "yapp_012_seq");
+  extern virtual task body();
+
+endclass
+//sequence 1
+class yapp_1_seq extends yapp_tx_seqs;
+`uvm_object_utils(yapp_1_seq)
+
+  extern function new(string name = "yapp_1_seq");
+  extern virtual task body();
+
+endclass
+//sequence 111
+class yapp_111_seq extends yapp_tx_seqs;
+`uvm_object_utils(yapp_111_seq)
+
+  extern function new(string name = "yapp_111_seq");
+  extern virtual task body();
+
+endclass
+//sequence repeat previous packet
+class yapp_repeat_addr_seq extends yapp_tx_seqs;
+`uvm_object_utils(yapp_repeat_addr_seq)
+
+  extern function new(string name = "yapp_repeat_addr_seq");
+  extern virtual task body();
+logic [5:0]prev_addr;
+endclass
+//sequence incr payload
+class yapp_incr_payload_seq extends yapp_tx_seqs;
+`uvm_object_utils(yapp_incr_payload_seq)
+
+  extern function new(string name = "yapp_incr_payload_seq");
+  extern virtual task body();
+
+endclass 
+
+
+  function yapp_tx_seqs:: new(string name = "yapp_tx_seqs");
+    super.new(name);
+  endfunction :new
+  
+  function yapp_012_seq:: new(string name = "yapp_012_seq");
+    super.new(name);
+  endfunction :new
+
+  function yapp_1_seq:: new(string name = "yapp_1_seq");
+    super.new(name);
+  endfunction :new
+ 
+  function yapp_111_seq:: new(string name = "yapp_111_seq");
+    super.new(name);
+  endfunction :new
+
+  function yapp_repeat_addr_seq:: new(string name = "yapp_repeat_addr_seq");
+    super.new(name);
+  endfunction :new
+
+  function yapp_incr_payload_seq:: new(string name = "yapp_incr_payload_seq");
+    super.new(name);
+  endfunction :new 
+
+////////////////////////////////////////////////////////
+  task yapp_tx_seqs::body();
+  if(starting_phase != null)starting_phase.raise_objection(this);
+    repeat(1)
+      begin
+        req = yapp_packet::type_id::create("req");
+        start_item(req);
+        assert(req.randomize());
+        finish_item(req); 
+      //  `uvm_do(req);
+      end
+  if(starting_phase != null)starting_phase.drop_objection(this);       
+  endtask : body
+///////////012 sequence body task////////////////////////
+  task yapp_012_seq::body();
+  if(starting_phase != null)starting_phase.raise_objection(this);
+  `uvm_do_with(req,{req.address == 2'b00;}) 
+  `uvm_do_with(req,{req.address == 2'b01;}) 
+  `uvm_do_with(req,{req.address == 2'b10;}) 
+  if(starting_phase != null)starting_phase.drop_objection(this); 
+  endtask : body
+///////////1 sequence body task////////////////////////
+  task yapp_1_seq::body();
+  if(starting_phase != null)starting_phase.raise_objection(this);
+  `uvm_do_with(req,{req.address == 2'b01;})
+
+  if(starting_phase != null)starting_phase.drop_objection(this); 
+  endtask : body
+///////////111 sequence body task////////////////////////
+  task yapp_111_seq::body();
+  if(starting_phase != null)starting_phase.raise_objection(this);
+  repeat(3)
+    begin
+    `uvm_do_with(req,{req.address == 2'b01;})
+    //yapp_111_seq::body();
+    end
+
+  if(starting_phase != null)starting_phase.drop_objection(this);  
+  endtask : body
+///////////repeat prev addr sequence body task////////////////////////
+  task yapp_repeat_addr_seq::body();
+  if(starting_phase != null)starting_phase.raise_objection(this);
+  `uvm_do(req)
+   prev_addr = req.address;
+  `uvm_do_with(req,{req.address==prev_addr;})
+
+  if(starting_phase != null)starting_phase.drop_objection(this);  
+  endtask : body
+//////////incr payload sequence//////////////////////////
+  task yapp_incr_payload_seq::body();
+  if(starting_phase != null)starting_phase.raise_objection(this);
+  `uvm_create(req)
+    assert(req.randomize());
+    for(int i=0;i< req.length-1;i++)  begin
+      req.randomize() with {req.payload == i};
+      `uvm_send(req)
+    end
+ 
+ if(starting_phase != null)starting_phase.drop_objection(this);  
+  endtask : body 
+
+
+`endif //YAPP_TX_SEQUENCER
+
+
